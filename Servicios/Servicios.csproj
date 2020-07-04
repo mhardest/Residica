@@ -32,6 +32,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -41,23 +42,50 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BLL\ExceptionManager.cs" />
-    <Compile Include="BLL\LanguageManager.cs" />
-    <Compile Include="BLL\SecurityManager.cs" />
-    <Compile Include="BLL\TraceManager.cs" />
-    <Compile Include="Dominio\Exceptions\BLLException.cs" />
-    <Compile Include="Dominio\Exceptions\DALException.cs" />
-    <Compile Include="Dominio\Exceptions\UIException.cs" />
-    <Compile Include="Dominio\Security\Composite\Familia.cs" />
-    <Compile Include="Dominio\Security\Composite\FamiliaComponent.cs" />
-    <Compile Include="Dominio\Security\Composite\Patente.cs" />
-    <Compile Include="Dominio\Security\Composite\Usuario.cs" />
-    <Compile Include="Facade\Extensions\StringExtension.cs" />
-    <Compile Include="Facade\FacadeServicio.cs" />
+    <Compile Include="Backup\BackupDAL.cs" />
+    <Compile Include="Backup\BackupDLL.cs" />
+    <Compile Include="Bitacora\BLL\BitacoraBLL.cs" />
+    <Compile Include="Bitacora\DAL\BitacoraDAL.cs" />
+    <Compile Include="Bitacora\Dominio\BitacoraDM.cs" />
+    <Compile Include="Criptografia\HelperEncrypt.cs" />
+    <Compile Include="Excepciones\ExceptionDAL.cs" />
+    <Compile Include="Excepciones\ExceptionBLL.cs" />
+    <Compile Include="External\DataTypes.cs" />
+    <Compile Include="External\ValidatorHelper.cs" />
+    <Compile Include="Multioma\LanguageManager.cs" />
+    <Compile Include="Multioma\Facade\Extensions\StringExtension.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Seguridad\BLL\FamiliaBLL.cs" />
+    <Compile Include="Seguridad\BLL\PatenteBLL.cs" />
+    <Compile Include="Seguridad\BLL\SectorBLL.cs" />
+    <Compile Include="Seguridad\BLL\UsuarioBLL.cs" />
+    <Compile Include="Seguridad\DAL\Adapter\FamiliaAdapter.cs" />
+    <Compile Include="Seguridad\DAL\Adapter\FamiliaCollectionAdapter.cs" />
+    <Compile Include="Seguridad\DAL\Adapter\PatenteAdapter.cs" />
+    <Compile Include="Seguridad\DAL\Adapter\PatenteCollectionAdapter.cs" />
+    <Compile Include="Seguridad\DAL\Adapter\SectorAdapter.cs" />
+    <Compile Include="Seguridad\DAL\Adapter\SectorCollectionAdapter.cs" />
+    <Compile Include="Seguridad\DAL\Adapter\UsuarioAdapter.cs" />
+    <Compile Include="Seguridad\DAL\Adapter\UsuarioCollectionAdapter.cs" />
+    <Compile Include="Seguridad\DAL\Facade\FamiliaFacade.cs" />
+    <Compile Include="Seguridad\DAL\Facade\Familia_PatenteFacade.cs" />
+    <Compile Include="Seguridad\DAL\Facade\PatenteFacade.cs" />
+    <Compile Include="Seguridad\DAL\Facade\SectorFacade.cs" />
+    <Compile Include="Seguridad\DAL\Facade\UsuarioFacade.cs" />
+    <Compile Include="Seguridad\DAL\FamiliaDAL.cs" />
+    <Compile Include="Seguridad\DAL\Familia_PatenteDAL.cs" />
+    <Compile Include="Seguridad\DAL\PatenteDAL.cs" />
+    <Compile Include="Seguridad\DAL\SectorDAL.cs" />
+    <Compile Include="Seguridad\DAL\Sql\conexion.cs" />
+    <Compile Include="Seguridad\DAL\Sql\db.cs" />
+    <Compile Include="Seguridad\DAL\UsuarioDAL.cs" />
+    <Compile Include="Seguridad\Dominio\Familia.cs" />
+    <Compile Include="Seguridad\Dominio\Patente.cs" />
+    <Compile Include="Seguridad\Dominio\Permiso.cs" />
+    <Compile Include="Seguridad\Dominio\Sector.cs" />
+    <Compile Include="Seguridad\Dominio\Usuario.cs" />
+    <Compile Include="Seguridad\UsuarioSession.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="DAL\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
