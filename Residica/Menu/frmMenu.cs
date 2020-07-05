@@ -1,4 +1,5 @@
-﻿using Servicios.Facade.Extensions;
+﻿using Residica.Herramientas.Seguridad;
+using Servicios.Facade.Extensions;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -107,6 +108,12 @@ namespace Residica
         private void salidToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void usuarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmUsuario frmUsuario = new frmUsuario();
+            frmUsuario.ShowDialog();
         }
     }
 }

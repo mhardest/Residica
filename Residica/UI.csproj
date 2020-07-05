@@ -46,34 +46,76 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="Herramientas\Seguridad\frmAsignarUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Herramientas\Seguridad\frmAsignarUsuario.Designer.cs">
+      <DependentUpon>frmAsignarUsuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="Login.cs">
+    <Compile Include="Herramientas\Seguridad\frmCambioContrasenia.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login.Designer.cs">
-      <DependentUpon>Login.cs</DependentUpon>
+    <Compile Include="Herramientas\Seguridad\frmCambioContrasenia.Designer.cs">
+      <DependentUpon>frmCambioContrasenia.cs</DependentUpon>
     </Compile>
-    <Compile Include="Menu.cs">
+    <Compile Include="Herramientas\Seguridad\frmDesbloqueoCuenta.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Menu.Designer.cs">
-      <DependentUpon>Menu.cs</DependentUpon>
+    <Compile Include="Herramientas\Seguridad\frmDesbloqueoCuenta.Designer.cs">
+      <DependentUpon>frmDesbloqueoCuenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Herramientas\Seguridad\frmPermisos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Herramientas\Seguridad\frmPermisos.Designer.cs">
+      <DependentUpon>frmPermisos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Herramientas\Seguridad\frmUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Herramientas\Seguridad\frmUsuario.Designer.cs">
+      <DependentUpon>frmUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Herramientas\Seguridad\frmUsuarioAlta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Herramientas\Seguridad\frmUsuarioAlta.Designer.cs">
+      <DependentUpon>frmUsuarioAlta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Herramientas\Seguridad\frmUsuarioModificar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Herramientas\Seguridad\frmUsuarioModificar.Designer.cs">
+      <DependentUpon>frmUsuarioModificar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\frmMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\frmMenu.Designer.cs">
+      <DependentUpon>frmMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Herramientas\Seguridad\frmUsuario.resx">
+      <DependentUpon>frmUsuario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Login.resx">
-      <DependentUpon>Login.cs</DependentUpon>
+    <EmbeddedResource Include="Herramientas\Seguridad\frmUsuarioAlta.resx">
+      <DependentUpon>frmUsuarioAlta.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Menu.resx">
-      <DependentUpon>Menu.cs</DependentUpon>
+    <EmbeddedResource Include="Herramientas\Seguridad\frmUsuarioModificar.resx">
+      <DependentUpon>frmUsuarioModificar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\frmMenu.resx">
+      <DependentUpon>frmMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -86,6 +128,7 @@
     </Compile>
     <None Include="I18n\idioma.en-US" />
     <None Include="I18n\idioma.es-AR" />
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -104,6 +147,10 @@
       <Project>{D8476E04-27CE-4598-A841-63F9FD74E2D3}</Project>
       <Name>Servicios</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Herramientas\Backup\" />
+    <Folder Include="Herramientas\Log\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

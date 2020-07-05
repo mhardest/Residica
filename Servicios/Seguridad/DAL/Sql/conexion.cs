@@ -25,13 +25,13 @@ namespace Servicios.Seguridad.DAL.Sql
 
         public SqlConnection GetDBConnectionResidica()
         {
-            SqlConnection connResidicaGestion = new SqlConnection(ConfigurationManager.ConnectionStrings["CS_PoligonoGestion"].ConnectionString);
+            SqlConnection connResidicaGestion = new SqlConnection(ConfigurationManager.ConnectionStrings["Residica"].ConnectionString);
             return connResidicaGestion;
         }
 
         public SqlConnection GetDBConnectionResidicaSeguridad()
         {
-            SqlConnection connQuickSeguridad = new SqlConnection(ConfigurationManager.ConnectionStrings["CS_PoligonoSeguridad"].ConnectionString);
+            SqlConnection connQuickSeguridad = new SqlConnection(ConfigurationManager.ConnectionStrings["ResidicaSeguridad"].ConnectionString);
             return connQuickSeguridad;
         }
     }
