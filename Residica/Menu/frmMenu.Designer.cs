@@ -637,7 +637,7 @@
             this.desbloquearToolStripMenuItem,
             this.bitacoToolStripMenuItem});
             this.seguridadToolStripMenuItem.Name = "seguridadToolStripMenuItem";
-            this.seguridadToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.seguridadToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
             this.seguridadToolStripMenuItem.Text = "Seguridad";
             // 
             // usuarioToolStripMenuItem
@@ -685,6 +685,7 @@
             this.hacerCopiaDeSeguridadToolStripMenuItem.Name = "hacerCopiaDeSeguridadToolStripMenuItem";
             this.hacerCopiaDeSeguridadToolStripMenuItem.Size = new System.Drawing.Size(208, 22);
             this.hacerCopiaDeSeguridadToolStripMenuItem.Text = "Hacer copia de seguridad";
+            this.hacerCopiaDeSeguridadToolStripMenuItem.Click += new System.EventHandler(this.hacerCopiaDeSeguridadToolStripMenuItem_Click);
             // 
             // restaurarToolStripMenuItem
             // 
@@ -695,7 +696,7 @@
             // ayudaToolStripMenuItem
             // 
             this.ayudaToolStripMenuItem.Name = "ayudaToolStripMenuItem";
-            this.ayudaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ayudaToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
             this.ayudaToolStripMenuItem.Text = "Ayuda";
             // 
             // salidToolStripMenuItem
@@ -715,6 +716,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Menu";
             this.Text = "Menu";
+            this.Load += new System.EventHandler(this.Menu_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

@@ -34,6 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -46,6 +47,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Herramientas\Backup\frmBackup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Herramientas\Backup\frmBackup.Designer.cs">
+      <DependentUpon>frmBackup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Herramientas\Backup\frmRestaurar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Herramientas\Backup\frmRestaurar.Designer.cs">
+      <DependentUpon>frmRestaurar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Herramientas\Seguridad\frmAsignarUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,6 +115,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Herramientas\Backup\frmBackup.resx">
+      <DependentUpon>frmBackup.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Herramientas\Seguridad\frmUsuario.resx">
       <DependentUpon>frmUsuario.cs</DependentUpon>
     </EmbeddedResource>
@@ -149,7 +165,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Herramientas\Backup\" />
     <Folder Include="Herramientas\Log\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

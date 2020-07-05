@@ -1,5 +1,9 @@
-﻿using Residica.Herramientas.Seguridad;
+﻿using Residica.Herramientas.Backup;
+using Residica.Herramientas.Seguridad;
 using Servicios.Facade.Extensions;
+using Servicios.Multioma.BLL;
+using Servicios.Multioma.Domain;
+using Servicios.Seguridad;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,6 +23,15 @@ namespace Residica
         public Menu()
         {
             InitializeComponent();
+        }
+
+        private void Menu_Load(object sender, EventArgs e)
+        {
+            int idioma = User._userSession.IdIdioma;
+            IdiomaDM idiomaDM= new IdiomaDM();
+            idiomaDM = IdiomaBLL.GetAdapted(idioma);
+            Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo(idiomaDM.Descripcion);
+            traductor();
         }
 
         private void inglesToolStripMenuItem_Click(object sender, EventArgs e)
@@ -114,6 +127,12 @@ namespace Residica
         {
             frmUsuario frmUsuario = new frmUsuario();
             frmUsuario.ShowDialog();
+        }
+
+        private void hacerCopiaDeSeguridadToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmBackup frmBackup = new frmBackup();
+            frmBackup.ShowDialog();
         }
     }
 }
