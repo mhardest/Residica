@@ -59,6 +59,12 @@
     <Compile Include="Herramientas\Backup\frmRestaurar.Designer.cs">
       <DependentUpon>frmRestaurar.cs</DependentUpon>
     </Compile>
+    <Compile Include="Herramientas\Log\frmLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Herramientas\Log\frmLog.Designer.cs">
+      <DependentUpon>frmLog.cs</DependentUpon>
+    </Compile>
     <Compile Include="Herramientas\Seguridad\frmAsignarUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,6 +124,9 @@
     <EmbeddedResource Include="Herramientas\Backup\frmBackup.resx">
       <DependentUpon>frmBackup.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Herramientas\Log\frmLog.resx">
+      <DependentUpon>frmLog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Herramientas\Seguridad\frmAsignarUsuario.resx">
       <DependentUpon>frmAsignarUsuario.cs</DependentUpon>
     </EmbeddedResource>
@@ -176,8 +185,6 @@
       <Name>Servicios</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Herramientas\Log\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

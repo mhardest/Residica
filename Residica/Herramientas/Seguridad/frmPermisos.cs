@@ -153,7 +153,7 @@ namespace Residica.Herramientas.Seguridad
             }
         }
 
-        private void btnFamiliaAgregar_Click(object sender, EventArgs e)
+        private void btnFamiliaAgregar_Click_1(object sender, EventArgs e)
         {
 
             if ((this.listFamiliaNoContiene.SelectedValue != null))
@@ -199,7 +199,7 @@ namespace Residica.Herramientas.Seguridad
             }
         }
 
-        private void btnFamiliaRemover_Click(object sender, EventArgs e)
+        private void btnFamiliaRemover_Click_1(object sender, EventArgs e)
         {
 
             if ((this.listFamiliaContiene.SelectedValue != null))
@@ -244,7 +244,7 @@ namespace Residica.Herramientas.Seguridad
 
         }
 
-        private void btnPatenteRemover_Click(object sender, EventArgs e)
+        private void btnPatenteRemover_Click_1(object sender, EventArgs e)
         {
             //Me.LstPoseePAT.Items.Add(LstNoPoseePAT.SelectedItem)
             {
@@ -295,7 +295,7 @@ namespace Residica.Herramientas.Seguridad
             }
         }
 
-        private void btnPatenteAgregar_Click(object sender, EventArgs e)
+        private void btnPatenteAgregar_Click_1(object sender, EventArgs e)
         {
             //Listbox sin DataSource es asi... con DS
             //Me.LstPoseePAT.Items.Add(listPatenteNoContiene.SelectedItem)
@@ -343,7 +343,7 @@ namespace Residica.Herramientas.Seguridad
             }
         }
 
-        private void btnPermisoBuscar_Click(object sender, EventArgs e)
+        private void btnPermisoBuscar_Click_1(object sender, EventArgs e)
         {
 
             try
@@ -410,11 +410,6 @@ namespace Residica.Herramientas.Seguridad
                     this.listFamiliaNoContiene.ValueMember = "Id";
                     this.listFamiliaNoContiene.DisplayMember = "Nombre";
                     this.pnlFamilia.Enabled = true;
-
-
-
-
-
 
                     //Patentes a cargar --> posee PAT
 
@@ -497,5 +492,7 @@ namespace Residica.Herramientas.Seguridad
                 MessageBox.Show(ex.Message, "Residica", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+ 
     }
 }

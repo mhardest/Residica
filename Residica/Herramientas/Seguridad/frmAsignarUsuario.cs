@@ -36,9 +36,7 @@ namespace Residica.Herramientas.Seguridad
             this.dgvUsuario.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvUsuario.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             this.dgvUsuario.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            this.dgvUsuario.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.NavajoWhite;
-            this.dgvUsuario.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            this.dgvUsuario.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.NavajoWhite;
+            this.dgvUsuario.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.Green;
 
             btnSeleccionar.Enabled = false;
         }
@@ -102,7 +100,7 @@ namespace Residica.Herramientas.Seguridad
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            if (DialogResult.OK == MessageBox.Show("Desea cancelar la carga?", "Admin Poligono", MessageBoxButtons.OKCancel, MessageBoxIcon.Question))
+            if (DialogResult.OK == MessageBox.Show("Desea cancelar la carga?", "Residica", MessageBoxButtons.OKCancel, MessageBoxIcon.Question))
             {
                 this.Close();
             }

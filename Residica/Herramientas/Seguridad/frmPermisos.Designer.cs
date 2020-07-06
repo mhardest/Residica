@@ -114,6 +114,7 @@
             this.btnPatenteRemover.TabIndex = 4;
             this.btnPatenteRemover.Text = ">>";
             this.btnPatenteRemover.UseVisualStyleBackColor = true;
+            this.btnPatenteRemover.Click += new System.EventHandler(this.btnPatenteRemover_Click_1);
             // 
             // btnPatenteAgregar
             // 
@@ -123,6 +124,7 @@
             this.btnPatenteAgregar.TabIndex = 4;
             this.btnPatenteAgregar.Text = "<<";
             this.btnPatenteAgregar.UseVisualStyleBackColor = true;
+            this.btnPatenteAgregar.Click += new System.EventHandler(this.btnPatenteAgregar_Click_1);
             // 
             // lbSector
             // 
@@ -179,6 +181,7 @@
             this.btnFamiliaRemover.TabIndex = 3;
             this.btnFamiliaRemover.Text = ">>";
             this.btnFamiliaRemover.UseVisualStyleBackColor = true;
+            this.btnFamiliaRemover.Click += new System.EventHandler(this.btnFamiliaRemover_Click_1);
             // 
             // btnFamiliaAgregar
             // 
@@ -188,6 +191,7 @@
             this.btnFamiliaAgregar.TabIndex = 2;
             this.btnFamiliaAgregar.Text = "<<";
             this.btnFamiliaAgregar.UseVisualStyleBackColor = true;
+            this.btnFamiliaAgregar.Click += new System.EventHandler(this.btnFamiliaAgregar_Click_1);
             // 
             // listFamiliaNoContiene
             // 
@@ -215,6 +219,7 @@
             this.btnPermisoBuscar.TabIndex = 2;
             this.btnPermisoBuscar.Text = "Buscar Permisos";
             this.btnPermisoBuscar.UseVisualStyleBackColor = true;
+            this.btnPermisoBuscar.Click += new System.EventHandler(this.btnPermisoBuscar_Click_1);
             // 
             // btnPermisosAsignarUsuario
             // 

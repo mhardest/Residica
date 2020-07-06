@@ -1,4 +1,5 @@
 ﻿using Residica.Herramientas.Backup;
+using Residica.Herramientas.Log;
 using Residica.Herramientas.Seguridad;
 using Servicios.Facade.Extensions;
 using Servicios.Multioma.BLL;
@@ -151,6 +152,12 @@ namespace Residica
         {
             frmDesbloqueoCuenta frmDesbloqueoCuenta = new frmDesbloqueoCuenta();
             frmDesbloqueoCuenta.ShowDialog();
+        }
+
+        private void bitacoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmLog frmlog = new frmLog();
+            frmlog.ShowDialog();
         }
     }
 }

@@ -673,6 +673,7 @@
             this.bitacoToolStripMenuItem.Name = "bitacoToolStripMenuItem";
             this.bitacoToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
             this.bitacoToolStripMenuItem.Text = "Bitacora";
+            this.bitacoToolStripMenuItem.Click += new System.EventHandler(this.bitacoToolStripMenuItem_Click);
             // 
             // backUpToolStripMenuItem
             // 
