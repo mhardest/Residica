@@ -85,7 +85,7 @@
             this.lbRutaGestion.Name = "lbRutaGestion";
             this.lbRutaGestion.Size = new System.Drawing.Size(69, 13);
             this.lbRutaGestion.TabIndex = 1;
-            this.lbRutaGestion.Text = "Ruta Gestion";
+            this.lbRutaGestion.Text = "Ruta Gestión";
             // 
             // tbRutaSeguridad
             // 

@@ -134,5 +134,23 @@ namespace Residica
             frmBackup frmBackup = new frmBackup();
             frmBackup.ShowDialog();
         }
+
+        private void cambiarContraseñaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCambioContrasenia frmCambioContrasenia = new frmCambioContrasenia();
+            frmCambioContrasenia.ShowDialog();
+        }
+
+        private void permisosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmPermisos frmPermisos = new frmPermisos();
+            frmPermisos.ShowDialog();
+        }
+
+        private void desbloquearToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmDesbloqueoCuenta frmDesbloqueoCuenta = new frmDesbloqueoCuenta();
+            frmDesbloqueoCuenta.ShowDialog();
+        }
     }
 }

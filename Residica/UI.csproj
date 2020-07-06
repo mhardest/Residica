@@ -118,6 +118,18 @@
     <EmbeddedResource Include="Herramientas\Backup\frmBackup.resx">
       <DependentUpon>frmBackup.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Herramientas\Seguridad\frmAsignarUsuario.resx">
+      <DependentUpon>frmAsignarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Herramientas\Seguridad\frmCambioContrasenia.resx">
+      <DependentUpon>frmCambioContrasenia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Herramientas\Seguridad\frmDesbloqueoCuenta.resx">
+      <DependentUpon>frmDesbloqueoCuenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Herramientas\Seguridad\frmPermisos.resx">
+      <DependentUpon>frmPermisos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Herramientas\Seguridad\frmUsuario.resx">
       <DependentUpon>frmUsuario.cs</DependentUpon>
     </EmbeddedResource>
