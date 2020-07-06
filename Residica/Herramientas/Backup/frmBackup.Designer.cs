@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lbRutaSeguridad = new System.Windows.Forms.Label();
+            this.tbRutaSeguridad = new System.Windows.Forms.TextBox();
+            this.lbRutaGestion = new System.Windows.Forms.Label();
             this.tbRutaGestion = new System.Windows.Forms.TextBox();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.lbRutaGestion = new System.Windows.Forms.Label();
-            this.tbRutaSeguridad = new System.Windows.Forms.TextBox();
-            this.lbRutaSeguridad = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,7 +49,32 @@
             this.groupBox1.Size = new System.Drawing.Size(512, 100);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Backup";
+            // 
+            // lbRutaSeguridad
+            // 
+            this.lbRutaSeguridad.AutoSize = true;
+            this.lbRutaSeguridad.Location = new System.Drawing.Point(6, 54);
+            this.lbRutaSeguridad.Name = "lbRutaSeguridad";
+            this.lbRutaSeguridad.Size = new System.Drawing.Size(81, 13);
+            this.lbRutaSeguridad.TabIndex = 3;
+            this.lbRutaSeguridad.Text = "Ruta Seguridad";
+            // 
+            // tbRutaSeguridad
+            // 
+            this.tbRutaSeguridad.Enabled = false;
+            this.tbRutaSeguridad.Location = new System.Drawing.Point(107, 54);
+            this.tbRutaSeguridad.Name = "tbRutaSeguridad";
+            this.tbRutaSeguridad.Size = new System.Drawing.Size(399, 20);
+            this.tbRutaSeguridad.TabIndex = 2;
+            // 
+            // lbRutaGestion
+            // 
+            this.lbRutaGestion.AutoSize = true;
+            this.lbRutaGestion.Location = new System.Drawing.Point(6, 28);
+            this.lbRutaGestion.Name = "lbRutaGestion";
+            this.lbRutaGestion.Size = new System.Drawing.Size(69, 13);
+            this.lbRutaGestion.TabIndex = 1;
+            this.lbRutaGestion.Text = "Ruta Gestión";
             // 
             // tbRutaGestion
             // 
@@ -77,32 +102,6 @@
             this.btnCancelar.TabIndex = 2;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
-            // 
-            // lbRutaGestion
-            // 
-            this.lbRutaGestion.AutoSize = true;
-            this.lbRutaGestion.Location = new System.Drawing.Point(6, 28);
-            this.lbRutaGestion.Name = "lbRutaGestion";
-            this.lbRutaGestion.Size = new System.Drawing.Size(69, 13);
-            this.lbRutaGestion.TabIndex = 1;
-            this.lbRutaGestion.Text = "Ruta Gestión";
-            // 
-            // tbRutaSeguridad
-            // 
-            this.tbRutaSeguridad.Enabled = false;
-            this.tbRutaSeguridad.Location = new System.Drawing.Point(107, 54);
-            this.tbRutaSeguridad.Name = "tbRutaSeguridad";
-            this.tbRutaSeguridad.Size = new System.Drawing.Size(399, 20);
-            this.tbRutaSeguridad.TabIndex = 2;
-            // 
-            // lbRutaSeguridad
-            // 
-            this.lbRutaSeguridad.AutoSize = true;
-            this.lbRutaSeguridad.Location = new System.Drawing.Point(6, 54);
-            this.lbRutaSeguridad.Name = "lbRutaSeguridad";
-            this.lbRutaSeguridad.Size = new System.Drawing.Size(81, 13);
-            this.lbRutaSeguridad.TabIndex = 3;
-            this.lbRutaSeguridad.Text = "Ruta Seguridad";
             // 
             // frmBackup
             // 

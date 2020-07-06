@@ -124,6 +124,9 @@
     <EmbeddedResource Include="Herramientas\Backup\frmBackup.resx">
       <DependentUpon>frmBackup.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Herramientas\Backup\frmRestaurar.resx">
+      <DependentUpon>frmRestaurar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Herramientas\Log\frmLog.resx">
       <DependentUpon>frmLog.cs</DependentUpon>
     </EmbeddedResource>
