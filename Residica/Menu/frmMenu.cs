@@ -1,6 +1,7 @@
 ﻿using Residica.Herramientas.Backup;
 using Residica.Herramientas.Log;
 using Residica.Herramientas.Seguridad;
+using Residica.Residentes;
 using Servicios.Facade.Extensions;
 using Servicios.Multioma.BLL;
 using Servicios.Multioma.Domain;
@@ -162,8 +163,8 @@ namespace Residica
 
         private void altaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //frmNuevoResidente frmNuevoResidente = new frmNuevoResidente();
-           // frmNuevoResidente.
+            frmNuevoResidente frmNuevoResidente = new frmNuevoResidente();
+            frmNuevoResidente.ShowDialog();
         }
     }
 }

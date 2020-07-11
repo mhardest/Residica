@@ -121,10 +121,10 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Residente\frmNuevoResidente.cs">
+    <Compile Include="Residentes\frmNuevoResidente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Residente\frmNuevoResidente.Designer.cs">
+    <Compile Include="Residentes\frmNuevoResidente.Designer.cs">
       <DependentUpon>frmNuevoResidente.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Herramientas\Backup\frmBackup.resx">
@@ -172,7 +172,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Residente\frmNuevoResidente.resx">
+    <EmbeddedResource Include="Residentes\frmNuevoResidente.resx">
       <DependentUpon>frmNuevoResidente.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="I18n\idioma.en-US" />
@@ -192,6 +192,14 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{4CDD57E5-D2E4-49FF-B83C-35D3C820462C}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Dominio\Dominio.csproj">
+      <Project>{141a57b1-a6db-40ab-9ab8-0dfeb268db7b}</Project>
+      <Name>Dominio</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Servicios\Servicios.csproj">
       <Project>{D8476E04-27CE-4598-A841-63F9FD74E2D3}</Project>
       <Name>Servicios</Name>
