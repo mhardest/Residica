@@ -159,5 +159,11 @@ namespace Residica
             frmLog frmlog = new frmLog();
             frmlog.ShowDialog();
         }
+
+        private void altaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //frmNuevoResidente frmNuevoResidente = new frmNuevoResidente();
+           // frmNuevoResidente.
+        }
     }
 }

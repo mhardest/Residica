@@ -154,6 +154,7 @@
             this.altaToolStripMenuItem.Name = "altaToolStripMenuItem";
             this.altaToolStripMenuItem.Size = new System.Drawing.Size(226, 22);
             this.altaToolStripMenuItem.Text = "Nuevo Residente";
+            this.altaToolStripMenuItem.Click += new System.EventHandler(this.altaToolStripMenuItem_Click);
             // 
             // bajaToolStripMenuItem
             // 
@@ -637,7 +638,7 @@
             this.desbloquearToolStripMenuItem,
             this.bitacoToolStripMenuItem});
             this.seguridadToolStripMenuItem.Name = "seguridadToolStripMenuItem";
-            this.seguridadToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.seguridadToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
             this.seguridadToolStripMenuItem.Text = "Seguridad";
             // 
             // usuarioToolStripMenuItem
@@ -681,7 +682,7 @@
             this.hacerCopiaDeSeguridadToolStripMenuItem,
             this.restaurarToolStripMenuItem});
             this.backUpToolStripMenuItem.Name = "backUpToolStripMenuItem";
-            this.backUpToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.backUpToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
             this.backUpToolStripMenuItem.Text = "BackUp";
             // 
             // hacerCopiaDeSeguridadToolStripMenuItem
@@ -700,7 +701,7 @@
             // ayudaToolStripMenuItem
             // 
             this.ayudaToolStripMenuItem.Name = "ayudaToolStripMenuItem";
-            this.ayudaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ayudaToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
             this.ayudaToolStripMenuItem.Text = "Ayuda";
             // 
             // salidToolStripMenuItem
