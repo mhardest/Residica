@@ -41,25 +41,35 @@ namespace Residica.Residentes
             this.tbDocumento = new System.Windows.Forms.TextBox();
             this.tbNombre = new System.Windows.Forms.TextBox();
             this.tbApellido = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lbTelefonoEmergencia = new System.Windows.Forms.Label();
+            this.lbDireccionContacto = new System.Windows.Forms.Label();
+            this.lbPersonaContacto = new System.Windows.Forms.Label();
+            this.lbTelefonoContacto = new System.Windows.Forms.Label();
+            this.lbObservacion = new System.Windows.Forms.Label();
+            this.lbObraSocial = new System.Windows.Forms.Label();
+            this.lbCuil = new System.Windows.Forms.Label();
+            this.lbDocumento = new System.Windows.Forms.Label();
+            this.lbNombre = new System.Windows.Forms.Label();
+            this.lbApellido = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAceptar = new System.Windows.Forms.Button();
+            this.lbFechaNacimiento = new System.Windows.Forms.Label();
+            this.dtpFechaNacimiento = new System.Windows.Forms.DateTimePicker();
+            this.PlanHabitacion = new System.Windows.Forms.GroupBox();
+            this.lbPlan = new System.Windows.Forms.Label();
+            this.lbHabitacion = new System.Windows.Forms.Label();
+            this.cbPlan = new System.Windows.Forms.ComboBox();
+            this.cbHabitacion = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.PlanHabitacion.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.dtpFechaNacimiento);
+            this.groupBox1.Controls.Add(this.lbFechaNacimiento);
             this.groupBox1.Controls.Add(this.rbObservacion);
             this.groupBox1.Controls.Add(this.tbDireccionContacto);
             this.groupBox1.Controls.Add(this.tbPersonaContacto);
@@ -70,25 +80,25 @@ namespace Residica.Residentes
             this.groupBox1.Controls.Add(this.tbDocumento);
             this.groupBox1.Controls.Add(this.tbNombre);
             this.groupBox1.Controls.Add(this.tbApellido);
-            this.groupBox1.Controls.Add(this.label10);
-            this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.lbTelefonoEmergencia);
+            this.groupBox1.Controls.Add(this.lbDireccionContacto);
+            this.groupBox1.Controls.Add(this.lbPersonaContacto);
+            this.groupBox1.Controls.Add(this.lbTelefonoContacto);
+            this.groupBox1.Controls.Add(this.lbObservacion);
+            this.groupBox1.Controls.Add(this.lbObraSocial);
+            this.groupBox1.Controls.Add(this.lbCuil);
+            this.groupBox1.Controls.Add(this.lbDocumento);
+            this.groupBox1.Controls.Add(this.lbNombre);
+            this.groupBox1.Controls.Add(this.lbApellido);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(643, 282);
+            this.groupBox1.Size = new System.Drawing.Size(643, 295);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             // 
             // rbObservacion
             // 
-            this.rbObservacion.Location = new System.Drawing.Point(19, 187);
+            this.rbObservacion.Location = new System.Drawing.Point(20, 210);
             this.rbObservacion.Name = "rbObservacion";
             this.rbObservacion.Size = new System.Drawing.Size(574, 75);
             this.rbObservacion.TabIndex = 20;
@@ -117,17 +127,17 @@ namespace Residica.Residentes
             // 
             // tbTelefonoEmergencia
             // 
-            this.tbTelefonoEmergencia.Location = new System.Drawing.Point(435, 75);
+            this.tbTelefonoEmergencia.Location = new System.Drawing.Point(129, 155);
             this.tbTelefonoEmergencia.Name = "tbTelefonoEmergencia";
             this.tbTelefonoEmergencia.Size = new System.Drawing.Size(158, 20);
-            this.tbTelefonoEmergencia.TabIndex = 15;
+            this.tbTelefonoEmergencia.TabIndex = 19;
             // 
             // tbObraSocial
             // 
-            this.tbObraSocial.Location = new System.Drawing.Point(129, 75);
+            this.tbObraSocial.Location = new System.Drawing.Point(436, 75);
             this.tbObraSocial.Name = "tbObraSocial";
-            this.tbObraSocial.Size = new System.Drawing.Size(158, 20);
-            this.tbObraSocial.TabIndex = 14;
+            this.tbObraSocial.Size = new System.Drawing.Size(157, 20);
+            this.tbObraSocial.TabIndex = 15;
             // 
             // tbCuil
             // 
@@ -157,101 +167,101 @@ namespace Residica.Residentes
             this.tbApellido.Size = new System.Drawing.Size(158, 20);
             this.tbApellido.TabIndex = 10;
             // 
-            // label10
+            // lbTelefonoEmergencia
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(316, 75);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(108, 13);
-            this.label10.TabIndex = 9;
-            this.label10.Text = "Telefono Emergencia".Translate();
+            this.lbTelefonoEmergencia.AutoSize = true;
+            this.lbTelefonoEmergencia.Location = new System.Drawing.Point(17, 155);
+            this.lbTelefonoEmergencia.Name = "lbTelefonoEmergencia";
+            this.lbTelefonoEmergencia.Size = new System.Drawing.Size(108, 13);
+            this.lbTelefonoEmergencia.TabIndex = 9;
+            this.lbTelefonoEmergencia.Text = "Telefono Emergencia";
             // 
-            // label9
+            // lbDireccionContacto
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(17, 127);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(98, 13);
-            this.label9.TabIndex = 8;
-            this.label9.Text = "Dirección Contacto".Translate();
+            this.lbDireccionContacto.AutoSize = true;
+            this.lbDireccionContacto.Location = new System.Drawing.Point(17, 127);
+            this.lbDireccionContacto.Name = "lbDireccionContacto";
+            this.lbDireccionContacto.Size = new System.Drawing.Size(98, 13);
+            this.lbDireccionContacto.TabIndex = 8;
+            this.lbDireccionContacto.Text = "Dirección Contacto";
             // 
-            // label8
+            // lbPersonaContacto
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(316, 101);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(92, 13);
-            this.label8.TabIndex = 7;
-            this.label8.Text = "Persona Contacto".Translate();
+            this.lbPersonaContacto.AutoSize = true;
+            this.lbPersonaContacto.Location = new System.Drawing.Point(316, 101);
+            this.lbPersonaContacto.Name = "lbPersonaContacto";
+            this.lbPersonaContacto.Size = new System.Drawing.Size(92, 13);
+            this.lbPersonaContacto.TabIndex = 7;
+            this.lbPersonaContacto.Text = "Persona Contacto";
             // 
-            // label7
+            // lbTelefonoContacto
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(17, 101);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(95, 13);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "Telefono Contacto".Translate();
+            this.lbTelefonoContacto.AutoSize = true;
+            this.lbTelefonoContacto.Location = new System.Drawing.Point(17, 101);
+            this.lbTelefonoContacto.Name = "lbTelefonoContacto";
+            this.lbTelefonoContacto.Size = new System.Drawing.Size(95, 13);
+            this.lbTelefonoContacto.TabIndex = 6;
+            this.lbTelefonoContacto.Text = "Telefono Contacto";
             // 
-            // label6
+            // lbObservacion
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(17, 171);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(67, 13);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "Observación".Translate();
+            this.lbObservacion.AutoSize = true;
+            this.lbObservacion.Location = new System.Drawing.Point(17, 185);
+            this.lbObservacion.Name = "lbObservacion";
+            this.lbObservacion.Size = new System.Drawing.Size(67, 13);
+            this.lbObservacion.TabIndex = 5;
+            this.lbObservacion.Text = "Observación";
             // 
-            // label5
+            // lbObraSocial
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(17, 75);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(62, 13);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Obra Social".Translate();
+            this.lbObraSocial.AutoSize = true;
+            this.lbObraSocial.Location = new System.Drawing.Point(316, 75);
+            this.lbObraSocial.Name = "lbObraSocial";
+            this.lbObraSocial.Size = new System.Drawing.Size(62, 13);
+            this.lbObraSocial.TabIndex = 4;
+            this.lbObraSocial.Text = "Obra Social";
             // 
-            // label4
+            // lbCuil
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(316, 49);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(46, 13);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "N° CUIL".Translate();
+            this.lbCuil.AutoSize = true;
+            this.lbCuil.Location = new System.Drawing.Point(316, 49);
+            this.lbCuil.Name = "lbCuil";
+            this.lbCuil.Size = new System.Drawing.Size(46, 13);
+            this.lbCuil.TabIndex = 3;
+            this.lbCuil.Text = "N° CUIL";
             // 
-            // label3
+            // lbDocumento
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(17, 49);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(77, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "N° Documento".Translate();
+            this.lbDocumento.AutoSize = true;
+            this.lbDocumento.Location = new System.Drawing.Point(17, 49);
+            this.lbDocumento.Name = "lbDocumento";
+            this.lbDocumento.Size = new System.Drawing.Size(77, 13);
+            this.lbDocumento.TabIndex = 2;
+            this.lbDocumento.Text = "N° Documento";
             // 
-            // label2
+            // lbNombre
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(316, 23);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Nombre".Translate();
+            this.lbNombre.AutoSize = true;
+            this.lbNombre.Location = new System.Drawing.Point(316, 23);
+            this.lbNombre.Name = "lbNombre";
+            this.lbNombre.Size = new System.Drawing.Size(44, 13);
+            this.lbNombre.TabIndex = 1;
+            this.lbNombre.Text = "Nombre";
             // 
-            // label1
+            // lbApellido
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(17, 23);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Apellido".Translate();
+            this.lbApellido.AutoSize = true;
+            this.lbApellido.Location = new System.Drawing.Point(17, 23);
+            this.lbApellido.Name = "lbApellido";
+            this.lbApellido.Size = new System.Drawing.Size(44, 13);
+            this.lbApellido.TabIndex = 0;
+            this.lbApellido.Text = "Apellido";
             // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.btnCancelar);
             this.groupBox2.Controls.Add(this.btnAceptar);
-            this.groupBox2.Location = new System.Drawing.Point(12, 333);
+            this.groupBox2.Location = new System.Drawing.Point(12, 367);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(643, 57);
             this.groupBox2.TabIndex = 2;
@@ -263,8 +273,9 @@ namespace Residica.Residentes
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(185, 23);
             this.btnCancelar.TabIndex = 1;
-            this.btnCancelar.Text = "Cancelar".Translate();
+            this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnAceptar
             // 
@@ -272,22 +283,89 @@ namespace Residica.Residentes
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(185, 23);
             this.btnAceptar.TabIndex = 0;
-            this.btnAceptar.Text = "Aceptar".Translate();
+            this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
+            // 
+            // lbFechaNacimiento
+            // 
+            this.lbFechaNacimiento.AutoSize = true;
+            this.lbFechaNacimiento.Location = new System.Drawing.Point(17, 75);
+            this.lbFechaNacimiento.Name = "lbFechaNacimiento";
+            this.lbFechaNacimiento.Size = new System.Drawing.Size(93, 13);
+            this.lbFechaNacimiento.TabIndex = 21;
+            this.lbFechaNacimiento.Text = "Fecha Nacimiento";
+            // 
+            // dtpFechaNacimiento
+            // 
+            this.dtpFechaNacimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpFechaNacimiento.Location = new System.Drawing.Point(128, 75);
+            this.dtpFechaNacimiento.Name = "dtpFechaNacimiento";
+            this.dtpFechaNacimiento.Size = new System.Drawing.Size(159, 20);
+            this.dtpFechaNacimiento.TabIndex = 14;
+            // 
+            // PlanHabitacion
+            // 
+            this.PlanHabitacion.Controls.Add(this.cbHabitacion);
+            this.PlanHabitacion.Controls.Add(this.cbPlan);
+            this.PlanHabitacion.Controls.Add(this.lbHabitacion);
+            this.PlanHabitacion.Controls.Add(this.lbPlan);
+            this.PlanHabitacion.Location = new System.Drawing.Point(12, 313);
+            this.PlanHabitacion.Name = "PlanHabitacion";
+            this.PlanHabitacion.Size = new System.Drawing.Size(643, 57);
+            this.PlanHabitacion.TabIndex = 3;
+            this.PlanHabitacion.TabStop = false;
+            // 
+            // lbPlan
+            // 
+            this.lbPlan.AutoSize = true;
+            this.lbPlan.Location = new System.Drawing.Point(17, 26);
+            this.lbPlan.Name = "lbPlan";
+            this.lbPlan.Size = new System.Drawing.Size(28, 13);
+            this.lbPlan.TabIndex = 1;
+            this.lbPlan.Text = "Plan";
+            // 
+            // lbHabitacion
+            // 
+            this.lbHabitacion.AutoSize = true;
+            this.lbHabitacion.Location = new System.Drawing.Point(316, 26);
+            this.lbHabitacion.Name = "lbHabitacion";
+            this.lbHabitacion.Size = new System.Drawing.Size(58, 13);
+            this.lbHabitacion.TabIndex = 2;
+            this.lbHabitacion.Text = "Habitación";
+            // 
+            // cbPlan
+            // 
+            this.cbPlan.FormattingEnabled = true;
+            this.cbPlan.Location = new System.Drawing.Point(128, 20);
+            this.cbPlan.Name = "cbPlan";
+            this.cbPlan.Size = new System.Drawing.Size(159, 21);
+            this.cbPlan.TabIndex = 3;
+            // 
+            // cbHabitacion
+            // 
+            this.cbHabitacion.FormattingEnabled = true;
+            this.cbHabitacion.Location = new System.Drawing.Point(435, 18);
+            this.cbHabitacion.Name = "cbHabitacion";
+            this.cbHabitacion.Size = new System.Drawing.Size(158, 21);
+            this.cbHabitacion.TabIndex = 4;
             // 
             // frmNuevoResidente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(675, 403);
+            this.ClientSize = new System.Drawing.Size(675, 448);
+            this.Controls.Add(this.PlanHabitacion);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmNuevoResidente";
-            this.Text = "Nuevo Residente".Translate();
+            this.Text = "Nuevo Residente";
+            this.Load += new System.EventHandler(this.frmNuevoResidente_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
+            this.PlanHabitacion.ResumeLayout(false);
+            this.PlanHabitacion.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -305,18 +383,25 @@ namespace Residica.Residentes
         private System.Windows.Forms.TextBox tbDocumento;
         private System.Windows.Forms.TextBox tbNombre;
         private System.Windows.Forms.TextBox tbApellido;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbTelefonoEmergencia;
+        private System.Windows.Forms.Label lbDireccionContacto;
+        private System.Windows.Forms.Label lbPersonaContacto;
+        private System.Windows.Forms.Label lbTelefonoContacto;
+        private System.Windows.Forms.Label lbObservacion;
+        private System.Windows.Forms.Label lbObraSocial;
+        private System.Windows.Forms.Label lbCuil;
+        private System.Windows.Forms.Label lbDocumento;
+        private System.Windows.Forms.Label lbNombre;
+        private System.Windows.Forms.Label lbApellido;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnAceptar;
+        private System.Windows.Forms.DateTimePicker dtpFechaNacimiento;
+        private System.Windows.Forms.Label lbFechaNacimiento;
+        private System.Windows.Forms.GroupBox PlanHabitacion;
+        private System.Windows.Forms.ComboBox cbHabitacion;
+        private System.Windows.Forms.ComboBox cbPlan;
+        private System.Windows.Forms.Label lbHabitacion;
+        private System.Windows.Forms.Label lbPlan;
     }
 }

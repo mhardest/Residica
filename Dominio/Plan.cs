@@ -9,7 +9,7 @@ namespace Dominio
     public class Plan
     {
         public int PlanId { get; set; }
-        public int Nombre { get; set; }
+        public string Nombre { get; set; }
         public decimal Importe { get; set; }
     }
 }

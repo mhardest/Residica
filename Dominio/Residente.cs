@@ -18,6 +18,7 @@ namespace Dominio
         public Boolean AuditoriaPsicologica { get; set; }
         public Boolean AuditoriaMedica { get; set; }
         public Boolean AuditoriaTraumatologica { get; set; }
+        public Boolean AuditoriaGeneral { get; set; }
         public int Estado { get; set; }
         public string Observacion { get; set; }
         public string TelefonoContacto { get; set; }

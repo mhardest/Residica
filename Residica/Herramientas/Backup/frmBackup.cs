@@ -60,5 +60,10 @@ namespace Residica.Herramientas.Backup
                 MessageBox.Show("Ha ocurrido un error realizando backup de la BD de Seguridad" + ex, "Residica", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
