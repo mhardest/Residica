@@ -1,6 +1,7 @@
 ﻿using DAL.Repositories.Sql.Utiles;
 using Dominio;
 using Microsoft.Practices.EnterpriseLibrary.Data;
+using Microsoft.Practices.EnterpriseLibrary.Data.Sql;
 using Servicios.Excepciones;
 using Servicios.External;
 using System;
@@ -278,13 +279,53 @@ namespace DAL.Repositories.Sql
 			/// <history>
 			/// 	[Matt]	12/07/2020 20:30:48
 			/// </history>
-			public static DataSet SelectAll()
+			public static List<Residente> SelectAll()
 			{
-				Database myDatabase = DatabaseFactory.CreateDatabase();
-				DbCommand myCommand = myDatabase.GetStoredProcCommand("ResidenteSelectAll");
+			string spNombre = "ResidenteSelectAll";
+			DataTable dt = new DataTable();
+			List<Residente> lista = new List<Residente>();
+			dt = dbNeg.EjecutarDataset(CommandType.StoredProcedure, spNombre, dbNeg.TipoBase.Residica, null).Tables[0];
+		
 
-				return myDatabase.ExecuteDataSet(myCommand);
+			foreach (DataRow row in dt.Rows)
+			{
+				Residente residente = new Residente();
+				residente.ResidenteId = Convert.ToInt32(row["ResidenteId"].ToString());
+				residente.Apellido = row["Apellido"].ToString();
+				residente.Nombre = row["Nombre"].ToString();
+				residente.DocumentoNumero = Convert.ToInt32(row["DocumentoNumero"].ToString());
+				residente.CUIL = Convert.ToInt32(row["CUIL"].ToString());
+				residente.FechaNacimiento = Convert.ToDateTime(row["FechaNacimiento"].ToString());
+				residente.ObraSocial = row["ObraSocial"].ToString();
+				residente.AuditoriaPsicologica = Convert.ToBoolean(row["AuditoriaPsicologica"].ToString());
+				residente.AuditoriaMedica = Convert.ToBoolean(row["AuditoriaMedica"].ToString());
+				residente.AuditoriaTraumatologica = Convert.ToBoolean(row["AuditoriaTraumatologica"].ToString());
+				residente.AuditoriaGeneral = Convert.ToBoolean(row["AuditoriaGeneral"].ToString());
+				residente.Estado = Convert.ToInt32(row["Estado"].ToString());
+				residente.Observacion = row["Observacion"].ToString();
+				residente.TelefonoContacto = row["TelefonoContacto"].ToString();
+				residente.PersonaContacto = row["PersonaContacto"].ToString();
+				residente.DireccionContacto = row["DireccionContacto"].ToString();
+				residente.NumeroEmergencia = row["NumeroEmergencia"].ToString();
+				if (row["HabitacionId"].ToString() != "")
+				{
+					residente.HabitacionId = Convert.ToInt32(row["HabitacionId"].ToString());
+				}
+				if (row["PlanId"].ToString() != "")
+				{
+					residente.PlanId = Convert.ToInt32(row["PlanId"].ToString());
+				}
+				lista.Add(residente);
+
 			}
+			return lista;
+			/*
+			Database myDatabase = DatabaseFactory..CreateDatabase();
+			DbCommand myCommand = myDatabase.GetStoredProcCommand("ResidenteSelectAll");
+
+			return myDatabase.ExecuteDataSet(myCommand);
+			*/
+		}
 
 			/// <summary>
 			/// Selecciona todos los registros de la tabla Residente a través de una foreign key.

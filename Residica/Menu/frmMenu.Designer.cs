@@ -37,6 +37,7 @@
             this.anularResidenteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.verResidentesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.verHabitacionesDispobilesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.verListaDeEsperaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.auditoriaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.psicologicaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.auditarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -144,7 +145,8 @@
             this.bajaToolStripMenuItem,
             this.anularResidenteToolStripMenuItem,
             this.verResidentesToolStripMenuItem,
-            this.verHabitacionesDispobilesToolStripMenuItem});
+            this.verHabitacionesDispobilesToolStripMenuItem,
+            this.verListaDeEsperaToolStripMenuItem});
             this.residenteToolStripMenuItem.Name = "residenteToolStripMenuItem";
             this.residenteToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
             this.residenteToolStripMenuItem.Text = "Residente";
@@ -161,24 +163,35 @@
             this.bajaToolStripMenuItem.Name = "bajaToolStripMenuItem";
             this.bajaToolStripMenuItem.Size = new System.Drawing.Size(226, 22);
             this.bajaToolStripMenuItem.Text = "Modificar Residente";
+            this.bajaToolStripMenuItem.Click += new System.EventHandler(this.bajaToolStripMenuItem_Click);
             // 
             // anularResidenteToolStripMenuItem
             // 
             this.anularResidenteToolStripMenuItem.Name = "anularResidenteToolStripMenuItem";
             this.anularResidenteToolStripMenuItem.Size = new System.Drawing.Size(226, 22);
             this.anularResidenteToolStripMenuItem.Text = "Anular Residente";
+            this.anularResidenteToolStripMenuItem.Click += new System.EventHandler(this.anularResidenteToolStripMenuItem_Click);
             // 
             // verResidentesToolStripMenuItem
             // 
             this.verResidentesToolStripMenuItem.Name = "verResidentesToolStripMenuItem";
             this.verResidentesToolStripMenuItem.Size = new System.Drawing.Size(226, 22);
             this.verResidentesToolStripMenuItem.Text = "Ver Residentes";
+            this.verResidentesToolStripMenuItem.Click += new System.EventHandler(this.verResidentesToolStripMenuItem_Click);
             // 
             // verHabitacionesDispobilesToolStripMenuItem
             // 
             this.verHabitacionesDispobilesToolStripMenuItem.Name = "verHabitacionesDispobilesToolStripMenuItem";
             this.verHabitacionesDispobilesToolStripMenuItem.Size = new System.Drawing.Size(226, 22);
             this.verHabitacionesDispobilesToolStripMenuItem.Text = "Ver Habitaciones Disponibles";
+            this.verHabitacionesDispobilesToolStripMenuItem.Click += new System.EventHandler(this.verHabitacionesDispobilesToolStripMenuItem_Click);
+            // 
+            // verListaDeEsperaToolStripMenuItem
+            // 
+            this.verListaDeEsperaToolStripMenuItem.Name = "verListaDeEsperaToolStripMenuItem";
+            this.verListaDeEsperaToolStripMenuItem.Size = new System.Drawing.Size(226, 22);
+            this.verListaDeEsperaToolStripMenuItem.Text = "Ver Lista de Espera";
+            this.verListaDeEsperaToolStripMenuItem.Click += new System.EventHandler(this.verListaDeEsperaToolStripMenuItem_Click);
             // 
             // auditoriaToolStripMenuItem
             // 
@@ -198,26 +211,28 @@
             this.porAuditarToolStripMenuItem,
             this.verAuditadosToolStripMenuItem});
             this.psicologicaToolStripMenuItem.Name = "psicologicaToolStripMenuItem";
-            this.psicologicaToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.psicologicaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.psicologicaToolStripMenuItem.Text = "Psicológica";
             // 
             // auditarToolStripMenuItem
             // 
             this.auditarToolStripMenuItem.Name = "auditarToolStripMenuItem";
-            this.auditarToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.auditarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.auditarToolStripMenuItem.Text = "Auditar";
             // 
             // porAuditarToolStripMenuItem
             // 
             this.porAuditarToolStripMenuItem.Name = "porAuditarToolStripMenuItem";
-            this.porAuditarToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.porAuditarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.porAuditarToolStripMenuItem.Text = "Ver Por Auditar";
+            this.porAuditarToolStripMenuItem.Click += new System.EventHandler(this.porAuditarToolStripMenuItem_Click);
             // 
             // verAuditadosToolStripMenuItem
             // 
             this.verAuditadosToolStripMenuItem.Name = "verAuditadosToolStripMenuItem";
-            this.verAuditadosToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.verAuditadosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.verAuditadosToolStripMenuItem.Text = "Ver Auditados";
+            this.verAuditadosToolStripMenuItem.Click += new System.EventHandler(this.verAuditadosToolStripMenuItem_Click);
             // 
             // traumatológicaToolStripMenuItem
             // 
@@ -226,25 +241,25 @@
             this.verPorAuditarToolStripMenuItem,
             this.verAuditadosToolStripMenuItem1});
             this.traumatológicaToolStripMenuItem.Name = "traumatológicaToolStripMenuItem";
-            this.traumatológicaToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.traumatológicaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.traumatológicaToolStripMenuItem.Text = "Traumatológica";
             // 
             // auditarToolStripMenuItem1
             // 
             this.auditarToolStripMenuItem1.Name = "auditarToolStripMenuItem1";
-            this.auditarToolStripMenuItem1.Size = new System.Drawing.Size(153, 22);
+            this.auditarToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.auditarToolStripMenuItem1.Text = "Auditar";
             // 
             // verPorAuditarToolStripMenuItem
             // 
             this.verPorAuditarToolStripMenuItem.Name = "verPorAuditarToolStripMenuItem";
-            this.verPorAuditarToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.verPorAuditarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.verPorAuditarToolStripMenuItem.Text = "Ver Por Auditar";
             // 
             // verAuditadosToolStripMenuItem1
             // 
             this.verAuditadosToolStripMenuItem1.Name = "verAuditadosToolStripMenuItem1";
-            this.verAuditadosToolStripMenuItem1.Size = new System.Drawing.Size(153, 22);
+            this.verAuditadosToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.verAuditadosToolStripMenuItem1.Text = "Ver Auditados";
             // 
             // medicaToolStripMenuItem
@@ -254,7 +269,7 @@
             this.verPorAuditarToolStripMenuItem1,
             this.verAuditadosToolStripMenuItem2});
             this.medicaToolStripMenuItem.Name = "medicaToolStripMenuItem";
-            this.medicaToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.medicaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.medicaToolStripMenuItem.Text = "Medica";
             // 
             // auditarToolStripMenuItem2
@@ -284,7 +299,7 @@
             this.verAceptadosToolStripMenuItem,
             this.verRechazadosToolStripMenuItem});
             this.generalToolStripMenuItem.Name = "generalToolStripMenuItem";
-            this.generalToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.generalToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.generalToolStripMenuItem.Text = "General";
             // 
             // auditarToolStripMenuItem3
@@ -335,7 +350,7 @@
             this.verDisponiblesToolStripMenuItem,
             this.verEquiposReservadasToolStripMenuItem});
             this.gestiónEquiposToolStripMenuItem.Name = "gestiónEquiposToolStripMenuItem";
-            this.gestiónEquiposToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
+            this.gestiónEquiposToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.gestiónEquiposToolStripMenuItem.Text = "Gestión Equipos";
             // 
             // reservarToolStripMenuItem
@@ -370,7 +385,7 @@
             this.verSalasDisponiblesToolStripMenuItem,
             this.verSalasReservadasToolStripMenuItem});
             this.gestiónSalasToolStripMenuItem.Name = "gestiónSalasToolStripMenuItem";
-            this.gestiónSalasToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
+            this.gestiónSalasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.gestiónSalasToolStripMenuItem.Text = "Gestión Salas";
             // 
             // reservarToolStripMenuItem1
@@ -404,7 +419,7 @@
             this.anularReservaToolStripMenuItem2,
             this.verDisponiblesToolStripMenuItem1});
             this.gestiónTrasladosToolStripMenuItem.Name = "gestiónTrasladosToolStripMenuItem";
-            this.gestiónTrasladosToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
+            this.gestiónTrasladosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.gestiónTrasladosToolStripMenuItem.Text = "Gestión Traslados";
             // 
             // reservarToolStripMenuItem2
@@ -812,5 +827,6 @@
         private System.Windows.Forms.ToolStripMenuItem hacerCopiaDeSeguridadToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem restaurarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ayudaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem verListaDeEsperaToolStripMenuItem;
     }
 }

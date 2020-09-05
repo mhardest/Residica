@@ -2,6 +2,8 @@
 using Dominio;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,7 +15,7 @@ namespace BLL
         private static GestorResidenteBLL Instance;
         private GestorResidenteBLL()
         { }
-
+        enum EstadoResidente { Pendiente = 1, Reserva = 2, ReservaBaja = 3, Aceptado = 4, Rechazado = 5, Anulado = 6};
         public static GestorResidenteBLL GetInstance()
         {
             if (Instance == null)
@@ -30,6 +32,7 @@ namespace BLL
         }
         public void AgregarResidente(Residente _residente)
         {
+            _residente.Estado = Convert.ToInt32(EstadoResidente.Pendiente);
             ResidenteDAL.Insert(_residente);
 
             //Traigo la habitacion y le quito una cama disponible.
@@ -41,12 +44,60 @@ namespace BLL
 
         public void GenerarReserva(Residente _residente)
         {
+            _residente.Estado = Convert.ToInt32(EstadoResidente.Reserva);
             ResidenteDAL.InsertReserva(_residente);
         }
 
         public Boolean HabitacionesDispobibles()
         {
-            return false;
+            int CantidadDisponibles = 0;
+            CantidadDisponibles = HabitacionDAL.SelectCantidadDisponibles();
+            if (CantidadDisponibles >0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
+            
+        }
+
+        public List<Residente> TraerResidentes()
+        {
+            List<Residente> listaplanes = new List<Residente>();
+            List<Residente> listaplanesfinal = new List<Residente>();
+            listaplanes = ResidenteDAL.SelectAll();
+            foreach (var item  in listaplanes)
+            {
+                //Si el estado no es aceptado no lo muestro)
+                if (item.Estado == Convert.ToInt32(EstadoResidente.Aceptado))
+                {
+                    listaplanesfinal.Add(item);
+                }
+
+            }
+
+            return listaplanesfinal;
+        }
+
+        public List<Residente> TraerListaEspera()
+        {
+            List<Residente> listaplanes = new List<Residente>();
+            List<Residente> listaplanesfinal = new List<Residente>();
+            listaplanes = ResidenteDAL.SelectAll();
+            foreach (var item in listaplanes)
+            {
+                //Si el estado no es aceptado no lo muestro)
+                if (item.Estado == Convert.ToInt32(EstadoResidente.Reserva))
+                {
+                    listaplanesfinal.Add(item);
+                }
+
+            }
+
+            return listaplanesfinal;
         }
 
         public List<Plan> TraerPlanesHabilitados()

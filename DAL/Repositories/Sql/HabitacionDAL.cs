@@ -250,5 +250,26 @@ namespace DAL.Repositories.Sql
 			}
 			return lista;
 		}
+
+		public static int SelectCantidadDisponibles()//DataSet SelectAll()
+		{
+			/*
+			Database myDatabase = DatabaseFactory.CreateDatabase();
+			DbCommand myCommand = myDatabase.GetStoredProcCommand("HabitacionSelectAll");
+
+			return myDatabase.ExecuteDataSet(myCommand);
+			*/
+			string spNombre = "HabitacionesCantidadDisponibles";
+			DataTable dt = new DataTable();
+			int cantidadDispobile = 0;
+			dt = dbNeg.EjecutarDataset(CommandType.StoredProcedure, spNombre, dbNeg.TipoBase.Residica, null).Tables[0];
+			//return dbNeg.EjecutarDataset(CommandType.StoredProcedure, spNombre, dbNeg.TipoBase.Residica, null).Tables[0];
+
+			foreach (DataRow row in dt.Rows)
+			{
+				cantidadDispobile = Convert.ToInt32(row["CantidadDisponibles"].ToString());
+			}
+			return cantidadDispobile;
+		}
 	}
 }

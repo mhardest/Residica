@@ -2,6 +2,8 @@
 using Residica.Herramientas.Log;
 using Residica.Herramientas.Seguridad;
 using Residica.Residentes;
+using Residica.Auditoria;
+using Residica.Habitaciones;
 using Servicios.Facade.Extensions;
 using Servicios.Multioma.BLL;
 using Servicios.Multioma.Domain;
@@ -165,6 +167,51 @@ namespace Residica
         {
             frmNuevoResidente frmNuevoResidente = new frmNuevoResidente();
             frmNuevoResidente.ShowDialog();
+        }
+
+        private void verResidentesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmVerResidentes frmVerResidentes = new frmVerResidentes();
+            frmVerResidentes.ShowDialog();
+        }
+
+        private void verListaDeEsperaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmVerResidenteListaEspera frmVerResidenteListaEspera = new frmVerResidenteListaEspera();
+            frmVerResidenteListaEspera.ShowDialog();
+        }
+
+        private void porAuditarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmVerResidentesSinAuditoriaPsico frmVerResidentesSinAuditoriaPsico = new frmVerResidentesSinAuditoriaPsico();
+            frmVerResidentesSinAuditoriaPsico.ShowDialog();
+        }
+
+        private void verAuditadosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+            frmVerResidentesAuditoriaPsico frmVerResidentesAuditoriaPsico = new frmVerResidentesAuditoriaPsico();
+            frmVerResidentesAuditoriaPsico.ShowDialog();
+            
+        }
+
+        private void bajaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmModificarResidente frmModificarResidente = new frmModificarResidente();
+            frmModificarResidente.ShowDialog();
+        }
+
+        private void anularResidenteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAnularResidente frmAnularResidente = new frmAnularResidente();
+            frmAnularResidente.ShowDialog();
+
+        }
+
+        private void verHabitacionesDispobilesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmHabitacionesDisponibles frmHabitacionesDisponibles = new frmHabitacionesDisponibles();
+            frmHabitacionesDisponibles.ShowDialog();
         }
     }
 }

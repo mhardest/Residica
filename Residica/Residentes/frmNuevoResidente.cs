@@ -57,7 +57,6 @@ namespace Residica.Residentes
                         {
                             Residente residente;
                             residente = AgregarResidente();
-                            residente.Estado = 2;
                             GestorResidenteBLL.GetInstance().GenerarReserva(residente);
 
                             if (DialogResult.OK == MessageBox.Show("Reserva de Residente generada correctamente.", "Residica", MessageBoxButtons.OK))
@@ -78,7 +77,7 @@ namespace Residica.Residentes
 
                     residente.PlanId = Convert.ToInt32(cbPlan.SelectedValue.ToString());
                     residente.HabitacionId = Convert.ToInt32(cbHabitacion.SelectedValue.ToString());
-                    residente.Estado = 1;
+
                     GestorResidenteBLL.GetInstance().AgregarResidente(residente);
 
                     if (DialogResult.OK == MessageBox.Show("Residente agregado correctamente.", "Residica", MessageBoxButtons.OK))
