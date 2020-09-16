@@ -102,11 +102,8 @@ namespace BLL
                         }
                         break;
                 }
-
             }
-
             return listaplanesfinal;
         }
-
     }
 }

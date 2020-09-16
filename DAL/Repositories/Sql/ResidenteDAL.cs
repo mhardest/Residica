@@ -109,6 +109,37 @@ namespace DAL.Repositories.Sql
 				*/
 			}
 
+		public static void Modificar(Residente _object)
+		{
+			try
+			{
+				string spNombre = "ResidenteUpdateParcial";
+				List<SqlParameter> parametros = new List<SqlParameter>();
+				SqlParameter retVal = new SqlParameter("RetVal", SqlDbType.Int);
+				retVal.Direction = ParameterDirection.ReturnValue;
+				parametros.Add(new SqlParameter("@ResidenteId", DataTypes.ToDBNull(_object.ResidenteId)));
+				parametros.Add(new SqlParameter("@Apellido", DataTypes.ToDBNull(_object.Apellido)));
+				parametros.Add(new SqlParameter("@Nombre", DataTypes.ToDBNull(_object.Nombre)));
+				parametros.Add(new SqlParameter("@DocumentoNumero", DataTypes.ToDBNull(_object.DocumentoNumero)));
+				parametros.Add(new SqlParameter("@CUIL", DataTypes.ToDBNull(_object.CUIL)));
+				parametros.Add(new SqlParameter("@FechaNacimiento", DataTypes.ToDBNull(_object.FechaNacimiento)));
+				parametros.Add(new SqlParameter("@ObraSocial", DataTypes.ToDBNull(_object.ObraSocial)));
+				parametros.Add(new SqlParameter("@Estado", DataTypes.ToDBNull(_object.Estado)));
+				parametros.Add(new SqlParameter("@Observacion", DataTypes.ToDBNull(_object.Observacion)));
+				parametros.Add(new SqlParameter("@TelefonoContacto", DataTypes.ToDBNull(_object.TelefonoContacto)));
+				parametros.Add(new SqlParameter("@PersonaContacto", DataTypes.ToDBNull(_object.PersonaContacto)));
+				parametros.Add(new SqlParameter("@DireccionContacto", DataTypes.ToDBNull(_object.DireccionContacto)));
+				parametros.Add(new SqlParameter("@NumeroEmergencia", DataTypes.ToDBNull(_object.NumeroEmergencia)));
+
+				parametros.Add(retVal);
+
+				dbNeg.EjecutarConsulta(dbNeg.TipoBase.Residica, CommandType.StoredProcedure, spNombre, parametros.ToArray());
+			}
+			catch (SqlException sqlex)
+			{
+				throw new ExceptionDAL(sqlex, sqlex.Message);
+			}
+		}
 		public static void InsertReserva(Residente _object)
 		{
 			try
@@ -366,6 +397,86 @@ namespace DAL.Repositories.Sql
 
 				return myDatabase.ExecuteDataSet(myCommand);
 			}
+
+			public static Residente SelectByDNI(int dni)
+			{
+			string spNombre = "ResidenteSelectByDNI";
+			List<SqlParameter> parametros = new List<SqlParameter>();
+			parametros.Add(new SqlParameter("@DocumentoNumero", DataTypes.ToDBNull(dni)));
+			DataTable dt = new DataTable();
+			dt = dbNeg.EjecutarDataset(CommandType.StoredProcedure, spNombre, dbNeg.TipoBase.Residica, parametros.ToArray()).Tables[0];
+			Residente residente = new Residente();
+			foreach (DataRow row in dt.Rows)
+			{
+				
+				residente.ResidenteId = Convert.ToInt32(row["ResidenteId"].ToString());
+				residente.Apellido = row["Apellido"].ToString();
+				residente.Nombre = row["Nombre"].ToString();
+				residente.DocumentoNumero = Convert.ToInt32(row["DocumentoNumero"].ToString());
+				residente.CUIL = Convert.ToInt32(row["CUIL"].ToString());
+				residente.FechaNacimiento = Convert.ToDateTime(row["FechaNacimiento"].ToString());
+				residente.ObraSocial = row["ObraSocial"].ToString();
+				residente.AuditoriaPsicologica = Convert.ToBoolean(row["AuditoriaPsicologica"].ToString());
+				residente.AuditoriaMedica = Convert.ToBoolean(row["AuditoriaMedica"].ToString());
+				residente.AuditoriaTraumatologica = Convert.ToBoolean(row["AuditoriaTraumatologica"].ToString());
+				residente.AuditoriaGeneral = Convert.ToBoolean(row["AuditoriaGeneral"].ToString());
+				residente.Estado = Convert.ToInt32(row["Estado"].ToString());
+				residente.Observacion = row["Observacion"].ToString();
+				residente.TelefonoContacto = row["TelefonoContacto"].ToString();
+				residente.PersonaContacto = row["PersonaContacto"].ToString();
+				residente.DireccionContacto = row["DireccionContacto"].ToString();
+				residente.NumeroEmergencia = row["NumeroEmergencia"].ToString();
+				if (row["HabitacionId"].ToString() != "")
+				{
+					residente.HabitacionId = Convert.ToInt32(row["HabitacionId"].ToString());
+				}
+				if (row["PlanId"].ToString() != "")
+				{
+					residente.PlanId = Convert.ToInt32(row["PlanId"].ToString());
+				}
+			}
+			return residente;
+		}
+		public static Residente SelectByCUIL(int CUIL)
+		{
+			string spNombre = "ResidenteSelectByCUIL";
+			List<SqlParameter> parametros = new List<SqlParameter>();
+			parametros.Add(new SqlParameter("@CUIL", DataTypes.ToDBNull(CUIL)));
+			DataTable dt = new DataTable();
+			dt = dbNeg.EjecutarDataset(CommandType.StoredProcedure, spNombre, dbNeg.TipoBase.Residica, parametros.ToArray()).Tables[0];
+			Residente residente = new Residente();
+			foreach (DataRow row in dt.Rows)
+			{
+
+				residente.ResidenteId = Convert.ToInt32(row["ResidenteId"].ToString());
+				residente.Apellido = row["Apellido"].ToString();
+				residente.Nombre = row["Nombre"].ToString();
+				residente.DocumentoNumero = Convert.ToInt32(row["DocumentoNumero"].ToString());
+				residente.CUIL = Convert.ToInt32(row["CUIL"].ToString());
+				residente.FechaNacimiento = Convert.ToDateTime(row["FechaNacimiento"].ToString());
+				residente.ObraSocial = row["ObraSocial"].ToString();
+				residente.AuditoriaPsicologica = Convert.ToBoolean(row["AuditoriaPsicologica"].ToString());
+				residente.AuditoriaMedica = Convert.ToBoolean(row["AuditoriaMedica"].ToString());
+				residente.AuditoriaTraumatologica = Convert.ToBoolean(row["AuditoriaTraumatologica"].ToString());
+				residente.AuditoriaGeneral = Convert.ToBoolean(row["AuditoriaGeneral"].ToString());
+				residente.Estado = Convert.ToInt32(row["Estado"].ToString());
+				residente.Observacion = row["Observacion"].ToString();
+				residente.TelefonoContacto = row["TelefonoContacto"].ToString();
+				residente.PersonaContacto = row["PersonaContacto"].ToString();
+				residente.DireccionContacto = row["DireccionContacto"].ToString();
+				residente.NumeroEmergencia = row["NumeroEmergencia"].ToString();
+				if (row["HabitacionId"].ToString() != "")
+				{
+					residente.HabitacionId = Convert.ToInt32(row["HabitacionId"].ToString());
+				}
+				if (row["PlanId"].ToString() != "")
+				{
+					residente.PlanId = Convert.ToInt32(row["PlanId"].ToString());
+				}
+			}
+			return residente;
 		}
 	}
+	}
+
 

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmVerResidenteListaEspera));
             this.dgvResidentes = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dgvResidentes)).BeginInit();
             this.SuspendLayout();
@@ -46,6 +47,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(778, 380);
             this.Controls.Add(this.dgvResidentes);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmVerResidenteListaEspera";
             this.Text = "Lista Espera";
             this.Load += new System.EventHandler(this.frmVerResidenteListaEspera_Load);

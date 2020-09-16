@@ -112,5 +112,24 @@ namespace BLL
             List<Habitacion> listahabitaciones = new List<Habitacion>();
             return listahabitaciones = HabitacionDAL.SelectDisponibles();
         }
+        
+       public Residente BuscarResidentePorDNI(int DNI)
+       {
+           Residente residente;
+           return residente = ResidenteDAL.SelectByDNI(DNI);
+       }
+
+        
+       public Residente BuscarResidentePorCUIL(int CUIL)
+       {
+            Residente residente;
+            return residente = ResidenteDAL.SelectByCUIL(CUIL);
+        }
+
+        public void ActualizarResidente(Residente residente)
+        {
+            ResidenteDAL.Modificar(residente);
+        }
     }
 }
+

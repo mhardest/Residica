@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmVerResidentes));
             this.dgvResidentes = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dgvResidentes)).BeginInit();
             this.SuspendLayout();
@@ -35,10 +36,11 @@
             // dgvResidentes
             // 
             this.dgvResidentes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvResidentes.Location = new System.Drawing.Point(12, 39);
+            this.dgvResidentes.Location = new System.Drawing.Point(12, 28);
             this.dgvResidentes.Name = "dgvResidentes";
-            this.dgvResidentes.Size = new System.Drawing.Size(754, 339);
+            this.dgvResidentes.Size = new System.Drawing.Size(754, 350);
             this.dgvResidentes.TabIndex = 0;
+            this.dgvResidentes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvResidentes_CellContentClick);
             // 
             // frmVerResidentes
             // 
@@ -46,6 +48,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(783, 450);
             this.Controls.Add(this.dgvResidentes);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmVerResidentes";
             this.Text = "Ver Residentes";
             this.Load += new System.EventHandler(this.frmVerResidentes_Load);

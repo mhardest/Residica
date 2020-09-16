@@ -54,9 +54,7 @@ namespace Residica
         {
             this.residenteToolStripMenuItem.Text = "Residente".Translate();
             this.altaToolStripMenuItem.Text = "Nuevo Residente".Translate();
-            this.bajaToolStripMenuItem.Text = "Modificar Residente".Translate();
-            this.anularResidenteToolStripMenuItem.Text = "Anular Residente".Translate();
-            this.verResidentesToolStripMenuItem.Text = "Ver Residentes".Translate();
+            this.verResidentesToolStripMenuItem.Text = "Gestión Residentes".Translate();
             this.verHabitacionesDispobilesToolStripMenuItem.Text = "Ver Habitaciones Disponibles".Translate();
             this.auditoriaToolStripMenuItem.Text = "Auditoría".Translate();
             this.psicologicaToolStripMenuItem.Text = "Psicológica".Translate();
@@ -171,8 +169,8 @@ namespace Residica
 
         private void verResidentesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmVerResidentes frmVerResidentes = new frmVerResidentes();
-            frmVerResidentes.ShowDialog();
+            frmGestionResidente frmGestionResidente = new frmGestionResidente();
+            frmGestionResidente.ShowDialog();
         }
 
         private void verListaDeEsperaToolStripMenuItem_Click(object sender, EventArgs e)
@@ -195,18 +193,6 @@ namespace Residica
             
         }
 
-        private void bajaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frmModificarResidente frmModificarResidente = new frmModificarResidente();
-            frmModificarResidente.ShowDialog();
-        }
-
-        private void anularResidenteToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frmAnularResidente frmAnularResidente = new frmAnularResidente();
-            frmAnularResidente.ShowDialog();
-
-        }
 
         private void verHabitacionesDispobilesToolStripMenuItem_Click(object sender, EventArgs e)
         {

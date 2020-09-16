@@ -22,5 +22,10 @@ namespace Residica.Residentes
         {
             dgvResidentes.DataSource = GestorResidenteBLL.GetInstance().TraerResidentes();
         }
+
+        private void dgvResidentes_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string valorCelda = dgvResidentes.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
+        }
     }
 }

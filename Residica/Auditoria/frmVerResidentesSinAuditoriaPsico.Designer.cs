@@ -30,6 +30,7 @@
         {
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.btn_auditar = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
@@ -49,14 +50,23 @@
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             // 
+            // btn_auditar
+            // 
+            this.btn_auditar.Location = new System.Drawing.Point(334, 447);
+            this.btn_auditar.Name = "btn_auditar";
+            this.btn_auditar.Size = new System.Drawing.Size(159, 49);
+            this.btn_auditar.TabIndex = 1;
+            this.btn_auditar.Text = "Auditar";
+            // 
             // frmVerResidentesSinAuditoriaPsico
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 519);
+            this.Controls.Add(this.btn_auditar);
             this.Controls.Add(this.gridControl1);
             this.Name = "frmVerResidentesSinAuditoriaPsico";
-            this.Text = "frmVerResidentesSinAuditoriaPsico";
+            this.Text = "Sin Auditoría Psicológica";
             this.Load += new System.EventHandler(this.frmVerResidentesSinAuditoriaPsico_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
@@ -68,5 +78,6 @@
 
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraEditors.SimpleButton btn_auditar;
     }
 }
