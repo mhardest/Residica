@@ -11,16 +11,16 @@ using System.Windows.Forms;
 
 namespace Residica.Auditoria
 {
-    public partial class frmVerResidentesAuditoriaPsico : Form
+    public partial class frmVerResidentesAuditoriaMedica : Form
     {
-        public frmVerResidentesAuditoriaPsico()
+        public frmVerResidentesAuditoriaMedica()
         {
             InitializeComponent();
         }
 
-        private void frmVerResidentesAuditoriaPsico_Load(object sender, EventArgs e)
+        private void frmVerResidentesAuditoriaMedica_Load(object sender, EventArgs e)
         {
-            gridControl1.DataSource = GestorAuditoriaBLL.GetInstance().TraerAuditados(1);
+            gridControl1.DataSource = GestorAuditoriaBLL.GetInstance().TraerAuditados(3);
             gridView1.OptionsView.ColumnAutoWidth = false;
             gridView1.BestFitColumns();
         }

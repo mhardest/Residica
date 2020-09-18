@@ -201,32 +201,68 @@ namespace DAL.Repositories.Sql
 			/// <history>
 			/// 	[Matt]	12/07/2020 20:30:48
 			/// </history>
-			public static void Update(int residenteId, string apellido, string nombre, int documentoNumero, int cUIL, string fechaNacimiento, string obraSocial, bool auditoriaPsicologica, bool auditoriaMedica, bool auditoriaTraumatologica, int estado, string observacion, string telefonoContacto, string personaContacto, string direccionContacto, string numeroEmergencia, int habitacionId, int planId)
+			public static void Update(Residente _object)
 			{
-				Database myDatabase = DatabaseFactory.CreateDatabase();
-				DbCommand myCommand = myDatabase.GetStoredProcCommand("ResidenteUpdate");
+			try
+			{
+				string spNombre = "ResidenteUpdate";
+				List<SqlParameter> parametros = new List<SqlParameter>();
+				SqlParameter retVal = new SqlParameter("RetVal", SqlDbType.Int);
+				retVal.Direction = ParameterDirection.ReturnValue;
+				parametros.Add(new SqlParameter("@ResidenteId", DataTypes.ToDBNull(_object.ResidenteId)));
+				parametros.Add(new SqlParameter("@Apellido", DataTypes.ToDBNull(_object.Apellido)));
+				parametros.Add(new SqlParameter("@Nombre", DataTypes.ToDBNull(_object.Nombre)));
+				parametros.Add(new SqlParameter("@DocumentoNumero", DataTypes.ToDBNull(_object.DocumentoNumero)));
+				parametros.Add(new SqlParameter("@CUIL", DataTypes.ToDBNull(_object.CUIL)));
+				parametros.Add(new SqlParameter("@FechaNacimiento", DataTypes.ToDBNull(_object.FechaNacimiento)));
+				parametros.Add(new SqlParameter("@ObraSocial", DataTypes.ToDBNull(_object.ObraSocial)));
+				parametros.Add(new SqlParameter("@Estado", DataTypes.ToDBNull(_object.Estado)));
+				parametros.Add(new SqlParameter("@Observacion", DataTypes.ToDBNull(_object.Observacion)));
+				parametros.Add(new SqlParameter("@TelefonoContacto", DataTypes.ToDBNull(_object.TelefonoContacto)));
+				parametros.Add(new SqlParameter("@PersonaContacto", DataTypes.ToDBNull(_object.PersonaContacto)));
+				parametros.Add(new SqlParameter("@DireccionContacto", DataTypes.ToDBNull(_object.DireccionContacto)));
+				parametros.Add(new SqlParameter("@NumeroEmergencia", DataTypes.ToDBNull(_object.NumeroEmergencia)));
+				parametros.Add(new SqlParameter("@AuditoriaGeneral", DataTypes.ToDBNull(_object.AuditoriaGeneral)));
+				parametros.Add(new SqlParameter("@AuditoriaPsicologica", DataTypes.ToDBNull(_object.AuditoriaPsicologica)));
+				parametros.Add(new SqlParameter("@AuditoriaMedica", DataTypes.ToDBNull(_object.AuditoriaMedica)));
+				parametros.Add(new SqlParameter("@AuditoriaTraumatologica", DataTypes.ToDBNull(_object.AuditoriaTraumatologica)));
+				parametros.Add(new SqlParameter("@HabitacionId", DataTypes.ToDBNull(_object.HabitacionId)));
+				parametros.Add(new SqlParameter("@PlanId", DataTypes.ToDBNull(_object.PlanId)));
 
-				myDatabase.AddInParameter(myCommand, "@ResidenteId", DbType.Int32, residenteId);
-				myDatabase.AddInParameter(myCommand, "@Apellido", DbType.String, apellido);
-				myDatabase.AddInParameter(myCommand, "@Nombre", DbType.String, nombre);
-				myDatabase.AddInParameter(myCommand, "@DocumentoNumero", DbType.Int32, documentoNumero);
-				myDatabase.AddInParameter(myCommand, "@CUIL", DbType.Int32, cUIL);
-				myDatabase.AddInParameter(myCommand, "@FechaNacimiento", DbType.String, fechaNacimiento);
-				myDatabase.AddInParameter(myCommand, "@ObraSocial", DbType.String, obraSocial);
-				myDatabase.AddInParameter(myCommand, "@AuditoriaPsicologica", DbType.Boolean, auditoriaPsicologica);
-				myDatabase.AddInParameter(myCommand, "@AuditoriaMedica", DbType.Boolean, auditoriaMedica);
-				myDatabase.AddInParameter(myCommand, "@AuditoriaTraumatologica", DbType.Boolean, auditoriaTraumatologica);
-				myDatabase.AddInParameter(myCommand, "@Estado", DbType.Int32, estado);
-				myDatabase.AddInParameter(myCommand, "@Observacion", DbType.String, observacion);
-				myDatabase.AddInParameter(myCommand, "@TelefonoContacto", DbType.String, telefonoContacto);
-				myDatabase.AddInParameter(myCommand, "@PersonaContacto", DbType.String, personaContacto);
-				myDatabase.AddInParameter(myCommand, "@DireccionContacto", DbType.String, direccionContacto);
-				myDatabase.AddInParameter(myCommand, "@NumeroEmergencia", DbType.String, numeroEmergencia);
-				myDatabase.AddInParameter(myCommand, "@HabitacionId", DbType.Int32, habitacionId);
-				myDatabase.AddInParameter(myCommand, "@PlanId", DbType.Int32, planId);
+				parametros.Add(retVal);
 
-				myDatabase.ExecuteNonQuery(myCommand);
+				dbNeg.EjecutarConsulta(dbNeg.TipoBase.Residica, CommandType.StoredProcedure, spNombre, parametros.ToArray());
 			}
+			catch (SqlException sqlex)
+			{
+				throw new ExceptionDAL(sqlex, sqlex.Message);
+			}
+			/*
+			Database myDatabase = DatabaseFactory.CreateDatabase();
+			DbCommand myCommand = myDatabase.GetStoredProcCommand("ResidenteUpdate");
+
+			myDatabase.AddInParameter(myCommand, "@ResidenteId", DbType.Int32, residenteId);
+			myDatabase.AddInParameter(myCommand, "@Apellido", DbType.String, apellido);
+			myDatabase.AddInParameter(myCommand, "@Nombre", DbType.String, nombre);
+			myDatabase.AddInParameter(myCommand, "@DocumentoNumero", DbType.Int32, documentoNumero);
+			myDatabase.AddInParameter(myCommand, "@CUIL", DbType.Int32, cUIL);
+			myDatabase.AddInParameter(myCommand, "@FechaNacimiento", DbType.String, fechaNacimiento);
+			myDatabase.AddInParameter(myCommand, "@ObraSocial", DbType.String, obraSocial);
+			myDatabase.AddInParameter(myCommand, "@AuditoriaPsicologica", DbType.Boolean, auditoriaPsicologica);
+			myDatabase.AddInParameter(myCommand, "@AuditoriaMedica", DbType.Boolean, auditoriaMedica);
+			myDatabase.AddInParameter(myCommand, "@AuditoriaTraumatologica", DbType.Boolean, auditoriaTraumatologica);
+			myDatabase.AddInParameter(myCommand, "@Estado", DbType.Int32, estado);
+			myDatabase.AddInParameter(myCommand, "@Observacion", DbType.String, observacion);
+			myDatabase.AddInParameter(myCommand, "@TelefonoContacto", DbType.String, telefonoContacto);
+			myDatabase.AddInParameter(myCommand, "@PersonaContacto", DbType.String, personaContacto);
+			myDatabase.AddInParameter(myCommand, "@DireccionContacto", DbType.String, direccionContacto);
+			myDatabase.AddInParameter(myCommand, "@NumeroEmergencia", DbType.String, numeroEmergencia);
+			myDatabase.AddInParameter(myCommand, "@HabitacionId", DbType.Int32, habitacionId);
+			myDatabase.AddInParameter(myCommand, "@PlanId", DbType.Int32, planId);
+
+			myDatabase.ExecuteNonQuery(myCommand);
+			*/
+		}
 
 			/// <summary>
 			/// Suprime un registro de la tabla Residente por una clave primaria(primary key).
@@ -291,15 +327,53 @@ namespace DAL.Repositories.Sql
 			/// <history>
 			/// 	[Matt]	12/07/2020 20:30:48
 			/// </history>
-			public static DataSet Select(int residenteId)
+			public static Residente Select(int residenteId)
 			{
-				Database myDatabase = DatabaseFactory.CreateDatabase();
-				DbCommand myCommand = myDatabase.GetStoredProcCommand("ResidenteSelect");
+			string spNombre = "ResidenteSelect";
+			List<SqlParameter> parametros = new List<SqlParameter>();
+			parametros.Add(new SqlParameter("@ResidenteId", DataTypes.ToDBNull(residenteId)));
+			DataTable dt = new DataTable();
+			dt = dbNeg.EjecutarDataset(CommandType.StoredProcedure, spNombre, dbNeg.TipoBase.Residica, parametros.ToArray()).Tables[0];
+			Residente residente = new Residente();
+			foreach (DataRow row in dt.Rows)
+			{
 
-				myDatabase.AddInParameter(myCommand, "@ResidenteId", DbType.Int32, residenteId);
-
-				return myDatabase.ExecuteDataSet(myCommand);
+				residente.ResidenteId = Convert.ToInt32(row["ResidenteId"].ToString());
+				residente.Apellido = row["Apellido"].ToString();
+				residente.Nombre = row["Nombre"].ToString();
+				residente.DocumentoNumero = Convert.ToInt32(row["DocumentoNumero"].ToString());
+				residente.CUIL = Convert.ToInt32(row["CUIL"].ToString());
+				residente.FechaNacimiento = Convert.ToDateTime(row["FechaNacimiento"].ToString());
+				residente.ObraSocial = row["ObraSocial"].ToString();
+				residente.AuditoriaPsicologica = Convert.ToBoolean(row["AuditoriaPsicologica"].ToString());
+				residente.AuditoriaMedica = Convert.ToBoolean(row["AuditoriaMedica"].ToString());
+				residente.AuditoriaTraumatologica = Convert.ToBoolean(row["AuditoriaTraumatologica"].ToString());
+				residente.AuditoriaGeneral = Convert.ToBoolean(row["AuditoriaGeneral"].ToString());
+				residente.Estado = Convert.ToInt32(row["Estado"].ToString());
+				residente.Observacion = row["Observacion"].ToString();
+				residente.TelefonoContacto = row["TelefonoContacto"].ToString();
+				residente.PersonaContacto = row["PersonaContacto"].ToString();
+				residente.DireccionContacto = row["DireccionContacto"].ToString();
+				residente.NumeroEmergencia = row["NumeroEmergencia"].ToString();
+				if (row["HabitacionId"].ToString() != "")
+				{
+					residente.HabitacionId = Convert.ToInt32(row["HabitacionId"].ToString());
+				}
+				if (row["PlanId"].ToString() != "")
+				{
+					residente.PlanId = Convert.ToInt32(row["PlanId"].ToString());
+				}
 			}
+			return residente;
+			/*
+			Database myDatabase = DatabaseFactory.CreateDatabase();
+			DbCommand myCommand = myDatabase.GetStoredProcCommand("ResidenteSelect");
+
+			myDatabase.AddInParameter(myCommand, "@ResidenteId", DbType.Int32, residenteId);
+
+			return myDatabase.ExecuteDataSet(myCommand);
+			*/
+		}
 
 			/// <summary>
 			/// Selecciona todos los registros de la tabla Residente.

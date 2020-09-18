@@ -39,19 +39,15 @@
             this.verListaDeEsperaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.auditoriaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.psicologicaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.auditarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.porAuditarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.verAuditadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.traumatológicaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.auditarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.verPorAuditarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.verAuditadosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.medicaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.auditarToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.verPorAuditarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.verAuditadosToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.generalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.auditarToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.verPorAuditarToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.verAuditadosToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.verAceptadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -190,18 +186,11 @@
             // psicologicaToolStripMenuItem
             // 
             this.psicologicaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.auditarToolStripMenuItem,
             this.porAuditarToolStripMenuItem,
             this.verAuditadosToolStripMenuItem});
             this.psicologicaToolStripMenuItem.Name = "psicologicaToolStripMenuItem";
-            this.psicologicaToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.psicologicaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.psicologicaToolStripMenuItem.Text = "Psicológica";
-            // 
-            // auditarToolStripMenuItem
-            // 
-            this.auditarToolStripMenuItem.Name = "auditarToolStripMenuItem";
-            this.auditarToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
-            this.auditarToolStripMenuItem.Text = "Auditar";
             // 
             // porAuditarToolStripMenuItem
             // 
@@ -220,99 +209,84 @@
             // traumatológicaToolStripMenuItem
             // 
             this.traumatológicaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.auditarToolStripMenuItem1,
             this.verPorAuditarToolStripMenuItem,
             this.verAuditadosToolStripMenuItem1});
             this.traumatológicaToolStripMenuItem.Name = "traumatológicaToolStripMenuItem";
-            this.traumatológicaToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.traumatológicaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.traumatológicaToolStripMenuItem.Text = "Traumatológica";
-            // 
-            // auditarToolStripMenuItem1
-            // 
-            this.auditarToolStripMenuItem1.Name = "auditarToolStripMenuItem1";
-            this.auditarToolStripMenuItem1.Size = new System.Drawing.Size(153, 22);
-            this.auditarToolStripMenuItem1.Text = "Auditar";
             // 
             // verPorAuditarToolStripMenuItem
             // 
             this.verPorAuditarToolStripMenuItem.Name = "verPorAuditarToolStripMenuItem";
-            this.verPorAuditarToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.verPorAuditarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.verPorAuditarToolStripMenuItem.Text = "Ver Por Auditar";
+            this.verPorAuditarToolStripMenuItem.Click += new System.EventHandler(this.verPorAuditarToolStripMenuItem_Click);
             // 
             // verAuditadosToolStripMenuItem1
             // 
             this.verAuditadosToolStripMenuItem1.Name = "verAuditadosToolStripMenuItem1";
-            this.verAuditadosToolStripMenuItem1.Size = new System.Drawing.Size(153, 22);
+            this.verAuditadosToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.verAuditadosToolStripMenuItem1.Text = "Ver Auditados";
+            this.verAuditadosToolStripMenuItem1.Click += new System.EventHandler(this.verAuditadosToolStripMenuItem1_Click);
             // 
             // medicaToolStripMenuItem
             // 
             this.medicaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.auditarToolStripMenuItem2,
             this.verPorAuditarToolStripMenuItem1,
             this.verAuditadosToolStripMenuItem2});
             this.medicaToolStripMenuItem.Name = "medicaToolStripMenuItem";
-            this.medicaToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.medicaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.medicaToolStripMenuItem.Text = "Medica";
-            // 
-            // auditarToolStripMenuItem2
-            // 
-            this.auditarToolStripMenuItem2.Name = "auditarToolStripMenuItem2";
-            this.auditarToolStripMenuItem2.Size = new System.Drawing.Size(153, 22);
-            this.auditarToolStripMenuItem2.Text = "Auditar";
             // 
             // verPorAuditarToolStripMenuItem1
             // 
             this.verPorAuditarToolStripMenuItem1.Name = "verPorAuditarToolStripMenuItem1";
-            this.verPorAuditarToolStripMenuItem1.Size = new System.Drawing.Size(153, 22);
+            this.verPorAuditarToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.verPorAuditarToolStripMenuItem1.Text = "Ver Por Auditar";
+            this.verPorAuditarToolStripMenuItem1.Click += new System.EventHandler(this.verPorAuditarToolStripMenuItem1_Click);
             // 
             // verAuditadosToolStripMenuItem2
             // 
             this.verAuditadosToolStripMenuItem2.Name = "verAuditadosToolStripMenuItem2";
-            this.verAuditadosToolStripMenuItem2.Size = new System.Drawing.Size(153, 22);
+            this.verAuditadosToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
             this.verAuditadosToolStripMenuItem2.Text = "Ver Auditados";
+            this.verAuditadosToolStripMenuItem2.Click += new System.EventHandler(this.verAuditadosToolStripMenuItem2_Click);
             // 
             // generalToolStripMenuItem
             // 
             this.generalToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.auditarToolStripMenuItem3,
             this.verPorAuditarToolStripMenuItem2,
             this.verAuditadosToolStripMenuItem3,
             this.verAceptadosToolStripMenuItem,
             this.verRechazadosToolStripMenuItem});
             this.generalToolStripMenuItem.Name = "generalToolStripMenuItem";
-            this.generalToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.generalToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.generalToolStripMenuItem.Text = "General";
-            // 
-            // auditarToolStripMenuItem3
-            // 
-            this.auditarToolStripMenuItem3.Name = "auditarToolStripMenuItem3";
-            this.auditarToolStripMenuItem3.Size = new System.Drawing.Size(155, 22);
-            this.auditarToolStripMenuItem3.Text = "Auditar";
             // 
             // verPorAuditarToolStripMenuItem2
             // 
             this.verPorAuditarToolStripMenuItem2.Name = "verPorAuditarToolStripMenuItem2";
-            this.verPorAuditarToolStripMenuItem2.Size = new System.Drawing.Size(155, 22);
+            this.verPorAuditarToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
             this.verPorAuditarToolStripMenuItem2.Text = "Ver Por Auditar";
+            this.verPorAuditarToolStripMenuItem2.Click += new System.EventHandler(this.verPorAuditarToolStripMenuItem2_Click);
             // 
             // verAuditadosToolStripMenuItem3
             // 
             this.verAuditadosToolStripMenuItem3.Name = "verAuditadosToolStripMenuItem3";
-            this.verAuditadosToolStripMenuItem3.Size = new System.Drawing.Size(155, 22);
+            this.verAuditadosToolStripMenuItem3.Size = new System.Drawing.Size(180, 22);
             this.verAuditadosToolStripMenuItem3.Text = "Ver Auditados";
+            this.verAuditadosToolStripMenuItem3.Click += new System.EventHandler(this.verAuditadosToolStripMenuItem3_Click);
             // 
             // verAceptadosToolStripMenuItem
             // 
             this.verAceptadosToolStripMenuItem.Name = "verAceptadosToolStripMenuItem";
-            this.verAceptadosToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.verAceptadosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.verAceptadosToolStripMenuItem.Text = "Ver Aceptados";
             // 
             // verRechazadosToolStripMenuItem
             // 
             this.verRechazadosToolStripMenuItem.Name = "verRechazadosToolStripMenuItem";
-            this.verRechazadosToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.verRechazadosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.verRechazadosToolStripMenuItem.Text = "Ver Rechazados";
             // 
             // turnoToolStripMenuItem
@@ -719,6 +693,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Menu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu";
             this.Load += new System.EventHandler(this.Menu_Load);
             this.menuStrip1.ResumeLayout(false);
@@ -760,18 +735,14 @@
         private System.Windows.Forms.ToolStripMenuItem psicologicaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem porAuditarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem verHabitacionesDispobilesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem auditarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem verAuditadosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem traumatológicaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem auditarToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem verPorAuditarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem verAuditadosToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem medicaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem auditarToolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem verPorAuditarToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem verAuditadosToolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem generalToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem auditarToolStripMenuItem3;
         private System.Windows.Forms.ToolStripMenuItem verPorAuditarToolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem verAuditadosToolStripMenuItem3;
         private System.Windows.Forms.ToolStripMenuItem verAceptadosToolStripMenuItem;

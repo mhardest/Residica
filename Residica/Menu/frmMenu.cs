@@ -58,19 +58,15 @@ namespace Residica
             this.verHabitacionesDispobilesToolStripMenuItem.Text = "Ver Habitaciones Disponibles".Translate();
             this.auditoriaToolStripMenuItem.Text = "Auditoría".Translate();
             this.psicologicaToolStripMenuItem.Text = "Psicológica".Translate();
-            this.auditarToolStripMenuItem.Text = "Auditar".Translate();
             this.porAuditarToolStripMenuItem.Text = "Ver Por Auditar".Translate();
             this.verAuditadosToolStripMenuItem.Text = "Ver Auditados".Translate();
             this.traumatológicaToolStripMenuItem.Text = "Traumatológica".Translate();
-            this.auditarToolStripMenuItem1.Text = "Auditar".Translate();
             this.verPorAuditarToolStripMenuItem.Text = "Ver Por Auditar".Translate();
             this.verAuditadosToolStripMenuItem1.Text = "Ver Auditados".Translate();
             this.medicaToolStripMenuItem.Text = "Medica".Translate();
-            this.auditarToolStripMenuItem2.Text = "Auditar".Translate();
             this.verPorAuditarToolStripMenuItem1.Text = "Ver Por Auditar".Translate();
             this.verAuditadosToolStripMenuItem2.Text = "Ver Auditados".Translate();
             this.generalToolStripMenuItem.Text = "General".Translate();
-            this.auditarToolStripMenuItem3.Text = "Auditar".Translate();
             this.verPorAuditarToolStripMenuItem2.Text = "Ver Por Auditar".Translate();
             this.verAuditadosToolStripMenuItem3.Text = "Ver Auditados".Translate();
             this.verAceptadosToolStripMenuItem.Text = "Ver Aceptados".Translate();
@@ -198,6 +194,42 @@ namespace Residica
         {
             frmHabitacionesDisponibles frmHabitacionesDisponibles = new frmHabitacionesDisponibles();
             frmHabitacionesDisponibles.ShowDialog();
+        }
+
+        private void verPorAuditarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmVerResidentesSinAuditoriaTrau frmVerResidentesSinAuditoriaTrau = new frmVerResidentesSinAuditoriaTrau();
+            frmVerResidentesSinAuditoriaTrau.ShowDialog();
+        }
+
+        private void verAuditadosToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmVerResidentesAuditoriaTrau frmVerResidentesAuditoriaTrau = new frmVerResidentesAuditoriaTrau();
+            frmVerResidentesAuditoriaTrau.ShowDialog();
+        }
+
+        private void verPorAuditarToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmVerResidentesSinAuditoriaMedica frmVerResidentesSinAuditoriaMedica = new frmVerResidentesSinAuditoriaMedica();
+            frmVerResidentesSinAuditoriaMedica.ShowDialog();
+        }
+
+        private void verAuditadosToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            frmVerResidentesAuditoriaMedica frmVerResidentesAuditoriaMedica = new frmVerResidentesAuditoriaMedica();
+            frmVerResidentesAuditoriaMedica.ShowDialog();
+        }
+
+        private void verPorAuditarToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            frmVerResidentesSinAuditoriaGral frmVerResidentesSinAuditoriaGral = new frmVerResidentesSinAuditoriaGral();
+            frmVerResidentesSinAuditoriaGral.ShowDialog();
+        }
+
+        private void verAuditadosToolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+            frmVerResidentesAuditoriaGral frmVerResidentesAuditoriaGral = new frmVerResidentesAuditoriaGral();
+            frmVerResidentesAuditoriaGral.ShowDialog();
         }
     }
 }

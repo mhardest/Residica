@@ -52,6 +52,7 @@
     <Compile Include="Factories\Factory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\Memory\CustomerRepository.cs" />
+    <Compile Include="Repositories\Sql\AuditoriaDAL.cs" />
     <Compile Include="Repositories\Sql\HabitacionDAL.cs" />
     <Compile Include="Repositories\Sql\PlanDAL.cs" />
     <Compile Include="Repositories\Sql\ResidenteDAL.cs" />

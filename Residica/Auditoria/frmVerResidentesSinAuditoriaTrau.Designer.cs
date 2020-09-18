@@ -1,6 +1,6 @@
 ﻿namespace Residica.Auditoria
 {
-    partial class frmVerResidentesSinAuditoriaPsico
+    partial class frmVerResidentesSinAuditoriaTrau
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmVerResidentesSinAuditoriaPsico));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmVerResidentesSinAuditoriaTrau));
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.btn_auditar = new DevExpress.XtraEditors.SimpleButton();
@@ -41,8 +41,8 @@
             this.gridControl1.Location = new System.Drawing.Point(12, 12);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(776, 414);
-            this.gridControl1.TabIndex = 0;
+            this.gridControl1.Size = new System.Drawing.Size(775, 354);
+            this.gridControl1.TabIndex = 1;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
@@ -53,25 +53,25 @@
             // 
             // btn_auditar
             // 
-            this.btn_auditar.Location = new System.Drawing.Point(334, 447);
+            this.btn_auditar.Location = new System.Drawing.Point(331, 399);
             this.btn_auditar.Name = "btn_auditar";
             this.btn_auditar.Size = new System.Drawing.Size(159, 49);
-            this.btn_auditar.TabIndex = 1;
+            this.btn_auditar.TabIndex = 2;
             this.btn_auditar.Text = "Auditar";
-            this.btn_auditar.Click += new System.EventHandler(this.btn_auditar_Click);
+            this.btn_auditar.Click += new System.EventHandler(this.btn_auditar_Click_1);
             // 
-            // frmVerResidentesSinAuditoriaPsico
+            // frmVerResidentesSinAuditoriaTrau
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 519);
+            this.ClientSize = new System.Drawing.Size(800, 502);
             this.Controls.Add(this.btn_auditar);
             this.Controls.Add(this.gridControl1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "frmVerResidentesSinAuditoriaPsico";
+            this.Name = "frmVerResidentesSinAuditoriaTrau";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Sin Auditoría Psicológica";
-            this.Load += new System.EventHandler(this.frmVerResidentesSinAuditoriaPsico_Load);
+            this.Text = "Ver Residentes Sin Auditoria Trautologica";
+            this.Load += new System.EventHandler(this.frmVerResidentesSinAuditoriaTrau_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);

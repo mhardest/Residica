@@ -55,17 +55,59 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Auditoria\frmAuditoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Auditoria\frmAuditoria.Designer.cs">
+      <DependentUpon>frmAuditoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Auditoria\frmVerResidentesAuditoriaGral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Auditoria\frmVerResidentesAuditoriaGral.Designer.cs">
+      <DependentUpon>frmVerResidentesAuditoriaGral.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Auditoria\frmVerResidentesAuditoriaMedica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Auditoria\frmVerResidentesAuditoriaMedica.Designer.cs">
+      <DependentUpon>frmVerResidentesAuditoriaMedica.cs</DependentUpon>
+    </Compile>
     <Compile Include="Auditoria\frmVerResidentesAuditoriaPsico.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Auditoria\frmVerResidentesAuditoriaPsico.Designer.cs">
       <DependentUpon>frmVerResidentesAuditoriaPsico.cs</DependentUpon>
     </Compile>
+    <Compile Include="Auditoria\frmVerResidentesAuditoriaTrau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Auditoria\frmVerResidentesAuditoriaTrau.Designer.cs">
+      <DependentUpon>frmVerResidentesAuditoriaTrau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Auditoria\frmVerResidentesSinAuditoriaGral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Auditoria\frmVerResidentesSinAuditoriaGral.Designer.cs">
+      <DependentUpon>frmVerResidentesSinAuditoriaGral.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Auditoria\frmVerResidentesSinAuditoriaMedica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Auditoria\frmVerResidentesSinAuditoriaMedica.Designer.cs">
+      <DependentUpon>frmVerResidentesSinAuditoriaMedica.cs</DependentUpon>
+    </Compile>
     <Compile Include="Auditoria\frmVerResidentesSinAuditoriaPsico.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Auditoria\frmVerResidentesSinAuditoriaPsico.Designer.cs">
       <DependentUpon>frmVerResidentesSinAuditoriaPsico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Auditoria\frmVerResidentesSinAuditoriaTrau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Auditoria\frmVerResidentesSinAuditoriaTrau.Designer.cs">
+      <DependentUpon>frmVerResidentesSinAuditoriaTrau.cs</DependentUpon>
     </Compile>
     <Compile Include="Habitaciones\frmHabitacionesDisponibles.cs">
       <SubType>Form</SubType>
@@ -171,11 +213,32 @@
     <Compile Include="Residentes\frmGestionResidente.Designer.cs">
       <DependentUpon>frmGestionResidente.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Auditoria\frmAuditoria.resx">
+      <DependentUpon>frmAuditoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Auditoria\frmVerResidentesAuditoriaGral.resx">
+      <DependentUpon>frmVerResidentesAuditoriaGral.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Auditoria\frmVerResidentesAuditoriaMedica.resx">
+      <DependentUpon>frmVerResidentesAuditoriaMedica.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Auditoria\frmVerResidentesAuditoriaPsico.resx">
       <DependentUpon>frmVerResidentesAuditoriaPsico.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Auditoria\frmVerResidentesAuditoriaTrau.resx">
+      <DependentUpon>frmVerResidentesAuditoriaTrau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Auditoria\frmVerResidentesSinAuditoriaGral.resx">
+      <DependentUpon>frmVerResidentesSinAuditoriaGral.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Auditoria\frmVerResidentesSinAuditoriaMedica.resx">
+      <DependentUpon>frmVerResidentesSinAuditoriaMedica.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Auditoria\frmVerResidentesSinAuditoriaPsico.resx">
       <DependentUpon>frmVerResidentesSinAuditoriaPsico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Auditoria\frmVerResidentesSinAuditoriaTrau.resx">
+      <DependentUpon>frmVerResidentesSinAuditoriaTrau.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Habitaciones\frmHabitacionesDisponibles.resx">
       <DependentUpon>frmHabitacionesDisponibles.cs</DependentUpon>

@@ -1,6 +1,5 @@
 ﻿using BLL;
 using DevExpress.XtraGrid.Views.Base;
-using DevExpress.XtraGrid.Views.Grid;
 using Dominio;
 using System;
 using System.Collections.Generic;
@@ -14,22 +13,19 @@ using System.Windows.Forms;
 
 namespace Residica.Auditoria
 {
-    public partial class frmVerResidentesSinAuditoriaPsico : Form
+    public partial class frmVerResidentesSinAuditoriaTrau : Form
     {
-        public frmVerResidentesSinAuditoriaPsico()
+        public frmVerResidentesSinAuditoriaTrau()
         {
             InitializeComponent();
         }
 
-        private void frmVerResidentesSinAuditoriaPsico_Load(object sender, EventArgs e)
+        private void frmVerResidentesSinAuditoriaTrau_Load(object sender, EventArgs e)
         {
-
             CargarGrilla();
-
-
         }
 
-        private void btn_auditar_Click(object sender, EventArgs e)
+        private void btn_auditar_Click_1(object sender, EventArgs e)
         {
             try
             {
@@ -37,8 +33,8 @@ namespace Residica.Auditoria
 
                 if (view.GetSelectedRows().Length == 1)
                 {
-                    Residente residente = (Residente)view.GetRow(view.GetSelectedRows()[0]); 
-                    frmAuditoria frmAuditoria = new frmAuditoria(residente, 2);
+                    Residente residente = (Residente)view.GetRow(view.GetSelectedRows()[0]);
+                    frmAuditoria frmAuditoria = new frmAuditoria(residente, 3);
                     frmAuditoria.Show();
                     CargarGrilla();
                 }
@@ -51,7 +47,7 @@ namespace Residica.Auditoria
 
         private void CargarGrilla()
         {
-            gridControl1.DataSource = GestorAuditoriaBLL.GetInstance().TraerPendienteAuditoria(1);
+            gridControl1.DataSource = GestorAuditoriaBLL.GetInstance().TraerPendienteAuditoria(2);
             gridView1.OptionsView.ColumnAutoWidth = false;
             gridView1.BestFitColumns();
         }

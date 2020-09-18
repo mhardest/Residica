@@ -96,7 +96,9 @@ namespace BLL
                         }
                         break;
                     case 4://General
-                        if (item.AuditoriaGeneral == false)
+                        if (item.AuditoriaGeneral == false && item.AuditoriaMedica == true 
+                            && item.AuditoriaTraumatologica == true
+                            && item.AuditoriaPsicologica == true) 
                         {
                             listaplanesfinal.Add(item);
                         }
@@ -104,6 +106,31 @@ namespace BLL
                 }
             }
             return listaplanesfinal;
+        }
+
+        public void AgregarAduditoria(int residenteid, int profesionalid, DateTime dia, string observacion)
+        {
+            AuditoriaDAL.Insert(residenteid, profesionalid, dia, observacion);
+            Residente residente;
+            residente = ResidenteDAL.Select(residenteid);
+
+            switch (profesionalid)
+            {
+                case 2:
+                    residente.AuditoriaPsicologica = true;
+                    break;
+                case 3:
+                    residente.AuditoriaTraumatologica = true;
+                    break;
+                case 4:
+                    residente.AuditoriaMedica = true;
+                    break;
+                case 5:
+                    residente.AuditoriaGeneral = true;
+                    break;
+            }
+           
+            ResidenteDAL.Update(residente);
         }
     }
 }
