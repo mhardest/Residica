@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace DAL.Repositories.Memory
 {
+    /*
     internal class CustomerRepository : IGenericRepository<Customer>
     {
         public void Delete(Guid id)
@@ -34,5 +35,5 @@ namespace DAL.Repositories.Memory
         {
             throw new NotImplementedException();
         }
-    }
+    }*/
 }

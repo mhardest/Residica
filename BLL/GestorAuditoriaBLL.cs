@@ -14,6 +14,7 @@ namespace BLL
         private static GestorAuditoriaBLL Instance;
         private GestorAuditoriaBLL()
         { }
+        enum EstadoResidente { Pendiente = 1, Reserva = 2, ReservaBaja = 3, Aceptado = 4, Rechazado = 5, Anulado = 6 };
         public static GestorAuditoriaBLL GetInstance()
         {
             if (Instance == null)
@@ -130,6 +131,27 @@ namespace BLL
                     break;
             }
            
+            ResidenteDAL.Update(residente);
+        }
+
+
+        public void AceptarResidente(int residenteid, int profesionalid, DateTime dia, string observacion)
+        {
+            AuditoriaDAL.Insert(residenteid, profesionalid, dia, observacion);
+            Residente residente;
+            residente = ResidenteDAL.Select(residenteid);
+            residente.AuditoriaGeneral = true;
+            residente.Estado = Convert.ToInt32(EstadoResidente.Aceptado);
+            ResidenteDAL.Update(residente);
+        }
+
+        public void RechazarResidente(int residenteid, int profesionalid, DateTime dia, string observacion)
+        {
+            AuditoriaDAL.Insert(residenteid, profesionalid, dia, observacion);
+            Residente residente;
+            residente = ResidenteDAL.Select(residenteid);
+            residente.AuditoriaGeneral = true;
+            residente.Estado = Convert.ToInt32(EstadoResidente.Rechazado);
             ResidenteDAL.Update(residente);
         }
     }

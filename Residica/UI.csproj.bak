@@ -33,22 +33,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DevExpress.Dashboard.v20.1.Core, Version=20.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Data.v20.1, Version=20.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.DataAccess.v20.1, Version=20.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Images.v20.1, Version=20.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Printing.v20.1.Core, Version=20.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Data.Desktop.v20.1, Version=20.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Utils.v20.1, Version=20.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraBars.v20.1, Version=20.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraEditors.v20.1, Version=20.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraGrid.v20.1, Version=20.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraLayout.v20.1, Version=20.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraPrinting.v20.1, Version=20.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraScheduler.v20.1, Version=20.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraScheduler.v20.1.Core, Version=20.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v19.1.Core, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGrid.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="System" />
-    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -115,12 +108,6 @@
     </Compile>
     <Compile Include="Auditoria\frmVerResidentesSinAuditoriaTrau.Designer.cs">
       <DependentUpon>frmVerResidentesSinAuditoriaTrau.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Auditoria\test.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Auditoria\test.Designer.cs">
-      <DependentUpon>test.cs</DependentUpon>
     </Compile>
     <Compile Include="Habitaciones\frmHabitacionesDisponibles.cs">
       <SubType>Form</SubType>
@@ -226,12 +213,6 @@
     <Compile Include="Residentes\frmGestionResidente.Designer.cs">
       <DependentUpon>frmGestionResidente.cs</DependentUpon>
     </Compile>
-    <Compile Include="Turno\Equipos\frmGestionEquipos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Turno\Equipos\frmGestionEquipos.Designer.cs">
-      <DependentUpon>frmGestionEquipos.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Auditoria\frmAuditoria.resx">
       <DependentUpon>frmAuditoria.cs</DependentUpon>
     </EmbeddedResource>
@@ -307,7 +288,6 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Residentes\frmNuevoResidente.resx">
       <DependentUpon>frmNuevoResidente.cs</DependentUpon>
@@ -320,9 +300,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Residentes\frmGestionResidente.resx">
       <DependentUpon>frmGestionResidente.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Turno\Equipos\frmGestionEquipos.resx">
-      <DependentUpon>frmGestionEquipos.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="I18n\idioma.en-US" />
     <None Include="I18n\idioma.es-AR" />
@@ -354,9 +331,8 @@
       <Name>Servicios</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <None Include="Resources\IconoResidica.png" />
+    <Folder Include="Turno\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

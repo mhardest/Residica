@@ -27,7 +27,7 @@ namespace DAL.Factories
 			//Implement here the initialization code
 		}
 		#endregion
-
+		/*
 		public IGenericRepository<Customer> GetCustomerRepository()
 		{
 			//Reflection ->  Conocer la meta data de un determinado modelo binario -> .dll/.exe
@@ -40,5 +40,6 @@ namespace DAL.Factories
 
 			return instancia as IGenericRepository<Customer>;
 		}
+		*/
 	}
 }

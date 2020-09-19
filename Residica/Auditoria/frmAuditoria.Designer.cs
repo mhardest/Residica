@@ -39,6 +39,7 @@
             this.btnConfirmar = new DevExpress.XtraEditors.SimpleButton();
             this.txtResidenteId = new DevExpress.XtraEditors.TextEdit();
             this.txtProfesionalId = new DevExpress.XtraEditors.TextEdit();
+            this.btnCancelar = new DevExpress.XtraEditors.SimpleButton();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtDocumento.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtResidente.Properties)).BeginInit();
@@ -111,9 +112,9 @@
             // 
             // btnConfirmar
             // 
-            this.btnConfirmar.Location = new System.Drawing.Point(103, 358);
+            this.btnConfirmar.Location = new System.Drawing.Point(20, 371);
             this.btnConfirmar.Name = "btnConfirmar";
-            this.btnConfirmar.Size = new System.Drawing.Size(168, 53);
+            this.btnConfirmar.Size = new System.Drawing.Size(141, 53);
             this.btnConfirmar.TabIndex = 2;
             this.btnConfirmar.Text = "Confirmar";
             this.btnConfirmar.Click += new System.EventHandler(this.btnConfirmar_Click);
@@ -132,11 +133,21 @@
             this.txtProfesionalId.Size = new System.Drawing.Size(74, 20);
             this.txtProfesionalId.TabIndex = 4;
             // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Location = new System.Drawing.Point(211, 371);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(141, 53);
+            this.btnCancelar.TabIndex = 5;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
             // frmAuditoria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(376, 450);
+            this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.txtProfesionalId);
             this.Controls.Add(this.txtResidenteId);
             this.Controls.Add(this.btnConfirmar);
@@ -169,5 +180,6 @@
         private DevExpress.XtraEditors.SimpleButton btnConfirmar;
         private DevExpress.XtraEditors.TextEdit txtResidenteId;
         private DevExpress.XtraEditors.TextEdit txtProfesionalId;
+        private DevExpress.XtraEditors.SimpleButton btnCancelar;
     }
 }

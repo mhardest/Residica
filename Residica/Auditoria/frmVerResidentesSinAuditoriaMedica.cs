@@ -13,7 +13,7 @@ using System.Windows.Forms;
 
 namespace Residica.Auditoria
 {
-    public partial class frmVerResidentesSinAuditoriaMedica : Form
+    public partial class frmVerResidentesSinAuditoriaMedica : DevExpress.XtraEditors.XtraForm
     {
         public frmVerResidentesSinAuditoriaMedica()
         {

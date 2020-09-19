@@ -20,7 +20,9 @@ namespace Residica.Residentes
 
         private void frmVerResidenteListaEspera_Load(object sender, EventArgs e)
         {
-            dgvResidentes.DataSource = GestorResidenteBLL.GetInstance().TraerListaEspera();
+            gridControl1.DataSource = GestorResidenteBLL.GetInstance().TraerListaEspera();
+            gridView1.OptionsView.ColumnAutoWidth = false;
+            gridView1.BestFitColumns();
         }
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmVerResidentesSinAuditoriaGral));
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.btn_auditar = new DevExpress.XtraEditors.SimpleButton();
@@ -66,8 +67,10 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btn_auditar);
             this.Controls.Add(this.gridControl1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmVerResidentesSinAuditoriaGral";
-            this.Text = "frmVerResidentesSinAuditoriaGral";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Ver Residentes Sin Auditoria Gral";
             this.Load += new System.EventHandler(this.frmVerResidentesSinAuditoriaGral_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();

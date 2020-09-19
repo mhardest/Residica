@@ -53,11 +53,15 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\Memory\CustomerRepository.cs" />
     <Compile Include="Repositories\Sql\AuditoriaDAL.cs" />
+    <Compile Include="Repositories\Sql\EquipoDAL.cs" />
     <Compile Include="Repositories\Sql\HabitacionDAL.cs" />
     <Compile Include="Repositories\Sql\PlanDAL.cs" />
     <Compile Include="Repositories\Sql\ResidenteDAL.cs" />
+    <Compile Include="Repositories\Sql\TrasladoDAL.cs" />
+    <Compile Include="Repositories\Sql\TurnoDAL.cs" />
     <Compile Include="Repositories\Sql\Utiles\conexionNeg.cs" />
     <Compile Include="Repositories\Sql\Utiles\dbNeg.cs" />
+    <Compile Include="Repositories\Sql\SalaDAL.cs" />
     <Compile Include="Tools\SQLHelper.cs" />
   </ItemGroup>
   <ItemGroup>

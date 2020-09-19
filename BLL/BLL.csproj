@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GestionTurnosBLL.cs" />
     <Compile Include="GestorAuditoriaBLL.cs" />
     <Compile Include="GestorResidenteBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

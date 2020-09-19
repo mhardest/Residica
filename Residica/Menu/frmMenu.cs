@@ -3,6 +3,7 @@ using Residica.Herramientas.Log;
 using Residica.Herramientas.Seguridad;
 using Residica.Residentes;
 using Residica.Auditoria;
+using Residica.Turno;
 using Residica.Habitaciones;
 using Servicios.Facade.Extensions;
 using Servicios.Multioma.BLL;
@@ -73,19 +74,8 @@ namespace Residica
             this.verRechazadosToolStripMenuItem.Text = "Ver Rechazados".Translate();
             this.turnoToolStripMenuItem.Text = "Turno".Translate();
             this.gestiónEquiposToolStripMenuItem.Text = "Gestión Equipos".Translate();
-            this.reservarToolStripMenuItem.Text = "Reservar".Translate();
-            this.anularReservaToolStripMenuItem.Text = "Anular Reserva".Translate();
-            this.verDisponiblesToolStripMenuItem.Text = "Ver Disponibles".Translate();
-            this.verEquiposReservadasToolStripMenuItem.Text = "Ver Reservas".Translate();
             this.gestiónSalasToolStripMenuItem.Text = "Gestión Salas".Translate();
-            this.reservarToolStripMenuItem1.Text = "Reservar".Translate();
-            this.anularReservaToolStripMenuItem1.Text = "Anular Reserva".Translate();
-            this.verSalasDisponiblesToolStripMenuItem.Text = "Ver Disponibles".Translate();
-            this.verSalasReservadasToolStripMenuItem.Text = "Ver Reservas".Translate();
             this.gestiónTrasladosToolStripMenuItem.Text = "Gestión Traslados".Translate();
-            this.reservarToolStripMenuItem2.Text = "Reservar".Translate();
-            this.anularReservaToolStripMenuItem2.Text = "Anular Reserva".Translate();
-            this.verDisponiblesToolStripMenuItem1.Text = "Ver Reservas".Translate();
             this.medicamentoToolStripMenuItem.Text = "Medicamento".Translate();
             this.pedidosToolStripMenuItem.Text = "Pedidos".Translate();
             this.nuevoPedidoToolStripMenuItem.Text = "Nuevo".Translate();
@@ -230,6 +220,12 @@ namespace Residica
         {
             frmVerResidentesAuditoriaGral frmVerResidentesAuditoriaGral = new frmVerResidentesAuditoriaGral();
             frmVerResidentesAuditoriaGral.ShowDialog();
+        }
+
+        private void gestiónEquiposToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmGestionEquipos frmGestionEquipos = new frmGestionEquipos();
+            frmGestionEquipos.ShowDialog();
         }
     }
 }

@@ -54,19 +54,8 @@
             this.verRechazadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.turnoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestiónEquiposToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.reservarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.anularReservaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.verDisponiblesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.verEquiposReservadasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestiónSalasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.reservarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.anularReservaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.verSalasDisponiblesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.verSalasReservadasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestiónTrasladosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.reservarToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.anularReservaToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.verDisponiblesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.medicamentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pedidosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nuevoPedidoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -189,7 +178,7 @@
             this.porAuditarToolStripMenuItem,
             this.verAuditadosToolStripMenuItem});
             this.psicologicaToolStripMenuItem.Name = "psicologicaToolStripMenuItem";
-            this.psicologicaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.psicologicaToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
             this.psicologicaToolStripMenuItem.Text = "Psicológica";
             // 
             // porAuditarToolStripMenuItem
@@ -212,20 +201,20 @@
             this.verPorAuditarToolStripMenuItem,
             this.verAuditadosToolStripMenuItem1});
             this.traumatológicaToolStripMenuItem.Name = "traumatológicaToolStripMenuItem";
-            this.traumatológicaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.traumatológicaToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
             this.traumatológicaToolStripMenuItem.Text = "Traumatológica";
             // 
             // verPorAuditarToolStripMenuItem
             // 
             this.verPorAuditarToolStripMenuItem.Name = "verPorAuditarToolStripMenuItem";
-            this.verPorAuditarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.verPorAuditarToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
             this.verPorAuditarToolStripMenuItem.Text = "Ver Por Auditar";
             this.verPorAuditarToolStripMenuItem.Click += new System.EventHandler(this.verPorAuditarToolStripMenuItem_Click);
             // 
             // verAuditadosToolStripMenuItem1
             // 
             this.verAuditadosToolStripMenuItem1.Name = "verAuditadosToolStripMenuItem1";
-            this.verAuditadosToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.verAuditadosToolStripMenuItem1.Size = new System.Drawing.Size(153, 22);
             this.verAuditadosToolStripMenuItem1.Text = "Ver Auditados";
             this.verAuditadosToolStripMenuItem1.Click += new System.EventHandler(this.verAuditadosToolStripMenuItem1_Click);
             // 
@@ -235,20 +224,20 @@
             this.verPorAuditarToolStripMenuItem1,
             this.verAuditadosToolStripMenuItem2});
             this.medicaToolStripMenuItem.Name = "medicaToolStripMenuItem";
-            this.medicaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.medicaToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
             this.medicaToolStripMenuItem.Text = "Medica";
             // 
             // verPorAuditarToolStripMenuItem1
             // 
             this.verPorAuditarToolStripMenuItem1.Name = "verPorAuditarToolStripMenuItem1";
-            this.verPorAuditarToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.verPorAuditarToolStripMenuItem1.Size = new System.Drawing.Size(153, 22);
             this.verPorAuditarToolStripMenuItem1.Text = "Ver Por Auditar";
             this.verPorAuditarToolStripMenuItem1.Click += new System.EventHandler(this.verPorAuditarToolStripMenuItem1_Click);
             // 
             // verAuditadosToolStripMenuItem2
             // 
             this.verAuditadosToolStripMenuItem2.Name = "verAuditadosToolStripMenuItem2";
-            this.verAuditadosToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
+            this.verAuditadosToolStripMenuItem2.Size = new System.Drawing.Size(153, 22);
             this.verAuditadosToolStripMenuItem2.Text = "Ver Auditados";
             this.verAuditadosToolStripMenuItem2.Click += new System.EventHandler(this.verAuditadosToolStripMenuItem2_Click);
             // 
@@ -260,33 +249,33 @@
             this.verAceptadosToolStripMenuItem,
             this.verRechazadosToolStripMenuItem});
             this.generalToolStripMenuItem.Name = "generalToolStripMenuItem";
-            this.generalToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.generalToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
             this.generalToolStripMenuItem.Text = "General";
             // 
             // verPorAuditarToolStripMenuItem2
             // 
             this.verPorAuditarToolStripMenuItem2.Name = "verPorAuditarToolStripMenuItem2";
-            this.verPorAuditarToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
+            this.verPorAuditarToolStripMenuItem2.Size = new System.Drawing.Size(155, 22);
             this.verPorAuditarToolStripMenuItem2.Text = "Ver Por Auditar";
             this.verPorAuditarToolStripMenuItem2.Click += new System.EventHandler(this.verPorAuditarToolStripMenuItem2_Click);
             // 
             // verAuditadosToolStripMenuItem3
             // 
             this.verAuditadosToolStripMenuItem3.Name = "verAuditadosToolStripMenuItem3";
-            this.verAuditadosToolStripMenuItem3.Size = new System.Drawing.Size(180, 22);
+            this.verAuditadosToolStripMenuItem3.Size = new System.Drawing.Size(155, 22);
             this.verAuditadosToolStripMenuItem3.Text = "Ver Auditados";
             this.verAuditadosToolStripMenuItem3.Click += new System.EventHandler(this.verAuditadosToolStripMenuItem3_Click);
             // 
             // verAceptadosToolStripMenuItem
             // 
             this.verAceptadosToolStripMenuItem.Name = "verAceptadosToolStripMenuItem";
-            this.verAceptadosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.verAceptadosToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
             this.verAceptadosToolStripMenuItem.Text = "Ver Aceptados";
             // 
             // verRechazadosToolStripMenuItem
             // 
             this.verRechazadosToolStripMenuItem.Name = "verRechazadosToolStripMenuItem";
-            this.verRechazadosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.verRechazadosToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
             this.verRechazadosToolStripMenuItem.Text = "Ver Rechazados";
             // 
             // turnoToolStripMenuItem
@@ -301,101 +290,22 @@
             // 
             // gestiónEquiposToolStripMenuItem
             // 
-            this.gestiónEquiposToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.reservarToolStripMenuItem,
-            this.anularReservaToolStripMenuItem,
-            this.verDisponiblesToolStripMenuItem,
-            this.verEquiposReservadasToolStripMenuItem});
             this.gestiónEquiposToolStripMenuItem.Name = "gestiónEquiposToolStripMenuItem";
-            this.gestiónEquiposToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
+            this.gestiónEquiposToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.gestiónEquiposToolStripMenuItem.Text = "Gestión Equipos";
-            // 
-            // reservarToolStripMenuItem
-            // 
-            this.reservarToolStripMenuItem.Name = "reservarToolStripMenuItem";
-            this.reservarToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
-            this.reservarToolStripMenuItem.Text = "Reservar";
-            // 
-            // anularReservaToolStripMenuItem
-            // 
-            this.anularReservaToolStripMenuItem.Name = "anularReservaToolStripMenuItem";
-            this.anularReservaToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
-            this.anularReservaToolStripMenuItem.Text = "Anular Reserva";
-            // 
-            // verDisponiblesToolStripMenuItem
-            // 
-            this.verDisponiblesToolStripMenuItem.Name = "verDisponiblesToolStripMenuItem";
-            this.verDisponiblesToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
-            this.verDisponiblesToolStripMenuItem.Text = "Ver Disponibles";
-            // 
-            // verEquiposReservadasToolStripMenuItem
-            // 
-            this.verEquiposReservadasToolStripMenuItem.Name = "verEquiposReservadasToolStripMenuItem";
-            this.verEquiposReservadasToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
-            this.verEquiposReservadasToolStripMenuItem.Text = "Ver Reservas";
+            this.gestiónEquiposToolStripMenuItem.Click += new System.EventHandler(this.gestiónEquiposToolStripMenuItem_Click);
             // 
             // gestiónSalasToolStripMenuItem
             // 
-            this.gestiónSalasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.reservarToolStripMenuItem1,
-            this.anularReservaToolStripMenuItem1,
-            this.verSalasDisponiblesToolStripMenuItem,
-            this.verSalasReservadasToolStripMenuItem});
             this.gestiónSalasToolStripMenuItem.Name = "gestiónSalasToolStripMenuItem";
-            this.gestiónSalasToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
+            this.gestiónSalasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.gestiónSalasToolStripMenuItem.Text = "Gestión Salas";
-            // 
-            // reservarToolStripMenuItem1
-            // 
-            this.reservarToolStripMenuItem1.Name = "reservarToolStripMenuItem1";
-            this.reservarToolStripMenuItem1.Size = new System.Drawing.Size(154, 22);
-            this.reservarToolStripMenuItem1.Text = "Reservar";
-            // 
-            // anularReservaToolStripMenuItem1
-            // 
-            this.anularReservaToolStripMenuItem1.Name = "anularReservaToolStripMenuItem1";
-            this.anularReservaToolStripMenuItem1.Size = new System.Drawing.Size(154, 22);
-            this.anularReservaToolStripMenuItem1.Text = "Anular Reserva";
-            // 
-            // verSalasDisponiblesToolStripMenuItem
-            // 
-            this.verSalasDisponiblesToolStripMenuItem.Name = "verSalasDisponiblesToolStripMenuItem";
-            this.verSalasDisponiblesToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
-            this.verSalasDisponiblesToolStripMenuItem.Text = "Ver Disponibles";
-            // 
-            // verSalasReservadasToolStripMenuItem
-            // 
-            this.verSalasReservadasToolStripMenuItem.Name = "verSalasReservadasToolStripMenuItem";
-            this.verSalasReservadasToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
-            this.verSalasReservadasToolStripMenuItem.Text = "Ver Reservas";
             // 
             // gestiónTrasladosToolStripMenuItem
             // 
-            this.gestiónTrasladosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.reservarToolStripMenuItem2,
-            this.anularReservaToolStripMenuItem2,
-            this.verDisponiblesToolStripMenuItem1});
             this.gestiónTrasladosToolStripMenuItem.Name = "gestiónTrasladosToolStripMenuItem";
-            this.gestiónTrasladosToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
+            this.gestiónTrasladosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.gestiónTrasladosToolStripMenuItem.Text = "Gestión Traslados";
-            // 
-            // reservarToolStripMenuItem2
-            // 
-            this.reservarToolStripMenuItem2.Name = "reservarToolStripMenuItem2";
-            this.reservarToolStripMenuItem2.Size = new System.Drawing.Size(152, 22);
-            this.reservarToolStripMenuItem2.Text = "Reservar";
-            // 
-            // anularReservaToolStripMenuItem2
-            // 
-            this.anularReservaToolStripMenuItem2.Name = "anularReservaToolStripMenuItem2";
-            this.anularReservaToolStripMenuItem2.Size = new System.Drawing.Size(152, 22);
-            this.anularReservaToolStripMenuItem2.Text = "Anular Reserva";
-            // 
-            // verDisponiblesToolStripMenuItem1
-            // 
-            this.verDisponiblesToolStripMenuItem1.Name = "verDisponiblesToolStripMenuItem1";
-            this.verDisponiblesToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
-            this.verDisponiblesToolStripMenuItem1.Text = "Ver Reservas";
             // 
             // medicamentoToolStripMenuItem
             // 
@@ -711,19 +621,8 @@
         private System.Windows.Forms.ToolStripMenuItem turnoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem medicamentoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gestiónEquiposToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem verDisponiblesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem reservarToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem anularReservaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gestiónSalasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem verSalasDisponiblesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem reservarToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem anularReservaToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem gestiónTrasladosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem verDisponiblesToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem reservarToolStripMenuItem2;
-        private System.Windows.Forms.ToolStripMenuItem verEquiposReservadasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem verSalasReservadasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem anularReservaToolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem configuraciónToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem salasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem verResidentesToolStripMenuItem;
