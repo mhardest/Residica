@@ -11,6 +11,8 @@ namespace Dominio
         public int ResidenteId { get; set; }
         public string Apellido { get; set; }
         public string Nombre { get; set; }
+        public string ApellidoNombre { get; set; }
+
         public int DocumentoNumero { get; set; }
         public int CUIL { get; set; }
         public DateTime FechaNacimiento { get; set; }
@@ -27,5 +29,6 @@ namespace Dominio
         public string NumeroEmergencia { get; set; }
         public int HabitacionId { get; set; }
         public int PlanId { get; set; }
+        
     }
 }

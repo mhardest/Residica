@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 
 namespace Dominio
 {
-    public class Turno
+    public class Turn
     {
-        int TurnoId { get; set; }
-        int Tipo { get; set; }
-        DateTime Fecha { get; set;}
-        int Hora { get; set; }
-        int Duracion { get; set; }
-        int ResidenteId { get; set; }
-        int SalaId { get; set; }
-        int EquipoId { get; set; }
-        int TrasladoId { get; set; }
+        public int TurnoId { get; set; }
+        public int Tipo { get; set; }
+        public DateTime Fecha { get; set;}
+        public int Hora { get; set; }
+        public int Duracion { get; set; }
+        public int ResidenteId { get; set; }
+        public int SalaId { get; set; }
+        public int EquipoId { get; set; }
+        public int TrasladoId { get; set; }
     }
 }

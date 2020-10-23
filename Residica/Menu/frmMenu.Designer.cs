@@ -300,12 +300,14 @@
             this.gestiónSalasToolStripMenuItem.Name = "gestiónSalasToolStripMenuItem";
             this.gestiónSalasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.gestiónSalasToolStripMenuItem.Text = "Gestión Salas";
+            this.gestiónSalasToolStripMenuItem.Click += new System.EventHandler(this.gestiónSalasToolStripMenuItem_Click);
             // 
             // gestiónTrasladosToolStripMenuItem
             // 
             this.gestiónTrasladosToolStripMenuItem.Name = "gestiónTrasladosToolStripMenuItem";
             this.gestiónTrasladosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.gestiónTrasladosToolStripMenuItem.Text = "Gestión Traslados";
+            this.gestiónTrasladosToolStripMenuItem.Click += new System.EventHandler(this.gestiónTrasladosToolStripMenuItem_Click);
             // 
             // medicamentoToolStripMenuItem
             // 
@@ -597,10 +599,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DarkTurquoise;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.menuStrip1);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.IconOptions.Icon = ((System.Drawing.Icon)(resources.GetObject("Menu.IconOptions.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Menu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

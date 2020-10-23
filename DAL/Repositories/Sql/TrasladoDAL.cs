@@ -1,4 +1,6 @@
-﻿using Microsoft.Practices.EnterpriseLibrary.Data;
+﻿using DAL.Repositories.Sql.Utiles;
+using Dominio;
+using Microsoft.Practices.EnterpriseLibrary.Data;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -112,12 +114,32 @@ namespace DAL.Repositories.Sql
 		/// <history>
 		/// 	[Matt]	19/09/2020 17:48:42
 		/// </history>
-		public static DataSet SelectAll()
+		/*public static DataSet SelectAll()
 		{
 			Database myDatabase = DatabaseFactory.CreateDatabase();
 			DbCommand myCommand = myDatabase.GetStoredProcCommand("TrasladoSelectAll");
 
 			return myDatabase.ExecuteDataSet(myCommand);
+		}*/
+		public static List<Traslado> SelectAll()
+		{
+			string spNombre = "TrasladoSelectAll";
+			DataTable dt = new DataTable();
+			List<Traslado> lista = new List<Traslado>();
+			dt = dbNeg.EjecutarDataset(CommandType.StoredProcedure, spNombre, dbNeg.TipoBase.Residica, null).Tables[0];
+			foreach (DataRow row in dt.Rows)
+			{
+				Traslado traslado = new Traslado();
+
+				traslado.TrasladoId = Convert.ToInt32((row["TrasladoId"].ToString()));
+				traslado.Nombre = row["Nombre"].ToString();
+				traslado.NumeroUnidad = Convert.ToInt32(row["NumeroUnidad"].ToString());
+				traslado.Patente = row["Patente"].ToString();
+				traslado.Estado = Convert.ToInt32(row["Estado"].ToString());
+
+				lista.Add(traslado);
+			}
+			return lista;
 		}
 	}
 }

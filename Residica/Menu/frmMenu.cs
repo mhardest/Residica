@@ -20,10 +20,12 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Residica.Turnos.Salas;
+using Residica.Turnos.Traslados;
 
 namespace Residica
 {
-    public partial class Menu : Form
+    public partial class Menu : DevExpress.XtraEditors.XtraForm
     {
         public Menu()
         {
@@ -226,6 +228,18 @@ namespace Residica
         {
             frmGestionEquipos frmGestionEquipos = new frmGestionEquipos();
             frmGestionEquipos.ShowDialog();
+        }
+
+        private void gestiónSalasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmGestionSalas frmGestionSalas = new frmGestionSalas();
+            frmGestionSalas.ShowDialog();
+        }
+
+        private void gestiónTrasladosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmGestionTraslados frmGestionTraslados = new frmGestionTraslados();
+            frmGestionTraslados.ShowDialog();
         }
     }
 }

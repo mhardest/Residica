@@ -226,11 +226,41 @@
     <Compile Include="Residentes\frmGestionResidente.Designer.cs">
       <DependentUpon>frmGestionResidente.cs</DependentUpon>
     </Compile>
-    <Compile Include="Turno\Equipos\frmGestionEquipos.cs">
+    <Compile Include="Turnos\Equipos\frmGestionEquipos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Turno\Equipos\frmGestionEquipos.Designer.cs">
+    <Compile Include="Turnos\Equipos\frmGestionEquipos.Designer.cs">
       <DependentUpon>frmGestionEquipos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Turnos\Equipos\frmReservarEquipo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Turnos\Equipos\frmReservarEquipo.Designer.cs">
+      <DependentUpon>frmReservarEquipo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Turnos\Salas\frmGestionSalas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Turnos\Salas\frmGestionSalas.Designer.cs">
+      <DependentUpon>frmGestionSalas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Turnos\Salas\frmReservarSalas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Turnos\Salas\frmReservarSalas.Designer.cs">
+      <DependentUpon>frmReservarSalas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Turnos\Traslados\frmGestionTraslados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Turnos\Traslados\frmGestionTraslados.Designer.cs">
+      <DependentUpon>frmGestionTraslados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Turnos\Traslados\frmReservarTraslados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Turnos\Traslados\frmReservarTraslados.Designer.cs">
+      <DependentUpon>frmReservarTraslados.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Auditoria\frmAuditoria.resx">
       <DependentUpon>frmAuditoria.cs</DependentUpon>
@@ -321,8 +351,23 @@
     <EmbeddedResource Include="Residentes\frmGestionResidente.resx">
       <DependentUpon>frmGestionResidente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Turno\Equipos\frmGestionEquipos.resx">
+    <EmbeddedResource Include="Turnos\Equipos\frmGestionEquipos.resx">
       <DependentUpon>frmGestionEquipos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Turnos\Equipos\frmReservarEquipo.resx">
+      <DependentUpon>frmReservarEquipo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Turnos\Salas\frmGestionSalas.resx">
+      <DependentUpon>frmGestionSalas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Turnos\Salas\frmReservarSalas.resx">
+      <DependentUpon>frmReservarSalas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Turnos\Traslados\frmGestionTraslados.resx">
+      <DependentUpon>frmGestionTraslados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Turnos\Traslados\frmReservarTraslados.resx">
+      <DependentUpon>frmReservarTraslados.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="I18n\idioma.en-US" />
     <None Include="I18n\idioma.es-AR" />

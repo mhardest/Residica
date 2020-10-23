@@ -11,6 +11,6 @@ namespace Dominio
         public int EquipoId { get; set; }
         public string EquipoNombre { get; set; }
         public string EquipoCaracteristicas { get; set; }
-        public string EquipoEstado { get; set; }
+        public int EquipoEstado { get; set; }
     }
 }

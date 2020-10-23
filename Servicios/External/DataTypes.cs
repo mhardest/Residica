@@ -36,7 +36,7 @@ namespace Servicios.External
         ///<summary>
         /// IntNull.
         ///</summary>
-        public static readonly int IntNull = int.MinValue;
+        public static readonly int IntNull = 0;//int.MinValue;
 
         ///<summary>
         /// IntNull.

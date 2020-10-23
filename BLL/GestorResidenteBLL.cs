@@ -74,6 +74,7 @@ namespace BLL
                 //Si el estado no es aceptado no lo muestro)
                 if (item.Estado == Convert.ToInt32(EstadoResidente.Aceptado))
                 {
+                    item.ApellidoNombre = item.Apellido.Trim() + ", " + item.Nombre.Trim();
                     listaplanesfinal.Add(item);
                 }
 

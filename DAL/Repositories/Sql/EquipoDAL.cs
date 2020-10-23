@@ -1,4 +1,6 @@
-﻿using Microsoft.Practices.EnterpriseLibrary.Data;
+﻿using DAL.Repositories.Sql.Utiles;
+using Dominio;
+using Microsoft.Practices.EnterpriseLibrary.Data;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -9,8 +11,8 @@ using System.Threading.Tasks;
 
 namespace DAL.Repositories.Sql
 {
-    public class EquipoDAL
-    {
+	public class EquipoDAL
+	{
 		/// <summary>
 		/// Inserta registros dentro de la tabla Equipo.
 		/// </summary>
@@ -108,12 +110,24 @@ namespace DAL.Repositories.Sql
 		/// <history>
 		/// 	[Matt]	19/09/2020 17:48:42
 		/// </history>
-		public static DataSet SelectAll()
+		public static List<Equipo> SelectAll()
 		{
-			Database myDatabase = DatabaseFactory.CreateDatabase();
-			DbCommand myCommand = myDatabase.GetStoredProcCommand("EquipoSelectAll");
+			string spNombre = "EquipoSelectAll";
+			DataTable dt = new DataTable();
+			List<Equipo> lista = new List<Equipo>();
+			dt = dbNeg.EjecutarDataset(CommandType.StoredProcedure, spNombre, dbNeg.TipoBase.Residica, null).Tables[0];
 
-			return myDatabase.ExecuteDataSet(myCommand);
+
+			foreach (DataRow row in dt.Rows)
+			{
+				Equipo equipo = new Equipo();
+				equipo.EquipoId = Convert.ToInt32((row["EquipoId"].ToString()));
+				equipo.EquipoNombre = row["EquipoNombre"].ToString();
+				equipo.EquipoCaracteristicas = row["EquipoCaracteristicas"].ToString();
+				equipo.EquipoEstado = Convert.ToInt32(row["EquipoEstado"].ToString());
+				lista.Add(equipo);
+			}
+			return lista;
 		}
 	}
 }

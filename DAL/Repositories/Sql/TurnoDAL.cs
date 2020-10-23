@@ -1,8 +1,13 @@
-﻿using Microsoft.Practices.EnterpriseLibrary.Data;
+﻿using DAL.Repositories.Sql.Utiles;
+using Dominio;
+using Microsoft.Practices.EnterpriseLibrary.Data;
+using Servicios.Excepciones;
+using Servicios.External;
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Common;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -27,22 +32,30 @@ namespace DAL.Repositories.Sql
 		/// <history>
 		/// 	[Matt]	19/09/2020 18:09:30
 		/// </history>
-		public static int Insert(int tipo, int hora, int duracion, int residenteId, int salaId, int equipoId, int trasladoId)
+		public static void Insert(Turn _object)
 		{
-			Database myDatabase = DatabaseFactory.CreateDatabase();
-			DbCommand myCommand = myDatabase.GetStoredProcCommand("TurnoInsert");
+			try
+			{
+				string spNombre = "TurnoInsert";
+				List<SqlParameter> parametros = new List<SqlParameter>();
+				SqlParameter retVal = new SqlParameter("RetVal", SqlDbType.Int);
+				retVal.Direction = ParameterDirection.ReturnValue;
+				parametros.Add(new SqlParameter("@Tipo", DataTypes.ToDBNull(_object.Tipo)));
+				parametros.Add(new SqlParameter("@Hora", DataTypes.ToDBNull(_object.Hora)));
+				parametros.Add(new SqlParameter("@Duracion", DataTypes.ToDBNull(_object.Duracion)));
+				parametros.Add(new SqlParameter("@ResidenteId", DataTypes.ToDBNull(_object.ResidenteId)));
+				parametros.Add(new SqlParameter("@SalaId", DataTypes.ToDBNull(_object.SalaId)));
+				parametros.Add(new SqlParameter("@EquipoId", DataTypes.ToDBNull(_object.EquipoId)));
+				parametros.Add(new SqlParameter("@TrasladoId", DataTypes.ToDBNull(_object.TrasladoId)));
+				parametros.Add(new SqlParameter("@Fecha", DataTypes.ToDBNull(_object.Fecha)));
+				parametros.Add(retVal);
 
-			myDatabase.AddInParameter(myCommand, "@Tipo", DbType.Int32, tipo);
-			myDatabase.AddInParameter(myCommand, "@Hora", DbType.Int32, hora);
-			myDatabase.AddInParameter(myCommand, "@Duracion", DbType.Int32, duracion);
-			myDatabase.AddInParameter(myCommand, "@ResidenteId", DbType.Int32, residenteId);
-			myDatabase.AddInParameter(myCommand, "@SalaId", DbType.Int32, salaId);
-			myDatabase.AddInParameter(myCommand, "@EquipoId", DbType.Int32, equipoId);
-			myDatabase.AddInParameter(myCommand, "@TrasladoId", DbType.Int32, trasladoId);
-
-			//Ejecuta la consulta y retorna el nuevo identity.
-			int returnValue = Convert.ToInt32(myDatabase.ExecuteScalar(myCommand));
-			return returnValue;
+				dbNeg.EjecutarConsulta(dbNeg.TipoBase.Residica, CommandType.StoredProcedure, spNombre, parametros.ToArray());
+			}
+			catch (SqlException sqlex)
+			{
+				throw new ExceptionDAL(sqlex, sqlex.Message);
+			}
 		}
 
 		/// <summary>
@@ -196,12 +209,39 @@ namespace DAL.Repositories.Sql
 		/// <history>
 		/// 	[Matt]	19/09/2020 18:09:30
 		/// </history>
-		public static DataSet SelectAll()
+		public static List<Turn> SelectAll()
 		{
-			Database myDatabase = DatabaseFactory.CreateDatabase();
-			DbCommand myCommand = myDatabase.GetStoredProcCommand("TurnoSelectAll");
+			string spNombre = "TurnoSelectAll";
+			DataTable dt = new DataTable();
+			List<Turn> lista = new List<Turn>();
+			dt = dbNeg.EjecutarDataset(CommandType.StoredProcedure, spNombre, dbNeg.TipoBase.Residica, null).Tables[0];
 
-			return myDatabase.ExecuteDataSet(myCommand);
+
+			foreach (DataRow row in dt.Rows)
+			{
+				Turn turno = new Turn();
+				turno.TurnoId = Convert.ToInt32(row["TurnoId"].ToString());
+				turno.Tipo = Convert.ToInt32(row["Tipo"].ToString());
+				turno.Fecha = Convert.ToDateTime(row["Fecha"].ToString());
+				turno.Hora = Convert.ToInt32(row["Hora"].ToString());
+				turno.Duracion = Convert.ToInt32(row["Duracion"].ToString());
+
+				if (row["EquipoId"].ToString() != "")
+				{
+					turno.EquipoId = Convert.ToInt32(row["EquipoId"].ToString());
+				}
+				if (row["SalaId"].ToString() != "")
+				{
+					turno.SalaId = Convert.ToInt32(row["SalaId"].ToString());
+				}
+				if (row["TrasladoId"].ToString() != "")
+				{
+					turno.TrasladoId = Convert.ToInt32(row["TrasladoId"].ToString());
+				}
+				lista.Add(turno);
+
+			}
+			return lista;
 		}
 
 		/// <summary>

@@ -39,6 +39,7 @@
             this.txtNroDocumento = new DevExpress.XtraEditors.TextEdit();
             this.btnBuscarResidente = new DevExpress.XtraEditors.SimpleButton();
             this.gbResidente = new System.Windows.Forms.GroupBox();
+            this.tbResidenteId = new System.Windows.Forms.TextBox();
             this.dtpFechaNacimiento = new System.Windows.Forms.DateTimePicker();
             this.lbFechaNacimiento = new System.Windows.Forms.Label();
             this.rbObservacion = new System.Windows.Forms.RichTextBox();
@@ -62,7 +63,6 @@
             this.lbNombre = new System.Windows.Forms.Label();
             this.lbApellido = new System.Windows.Forms.Label();
             this.btnGuardarCambios = new DevExpress.XtraEditors.SimpleButton();
-            this.tbResidenteId = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtNroCuil.Properties)).BeginInit();
@@ -105,9 +105,9 @@
             this.groupBox2.Controls.Add(this.txtNroCuil);
             this.groupBox2.Controls.Add(this.txtNroDocumento);
             this.groupBox2.Controls.Add(this.btnBuscarResidente);
-            this.groupBox2.Location = new System.Drawing.Point(414, 12);
+            this.groupBox2.Location = new System.Drawing.Point(414, 4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(374, 191);
+            this.groupBox2.Size = new System.Drawing.Size(374, 199);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             // 
@@ -180,6 +180,13 @@
             this.gbResidente.Size = new System.Drawing.Size(775, 300);
             this.gbResidente.TabIndex = 3;
             this.gbResidente.TabStop = false;
+            // 
+            // tbResidenteId
+            // 
+            this.tbResidenteId.Location = new System.Drawing.Point(527, 154);
+            this.tbResidenteId.Name = "tbResidenteId";
+            this.tbResidenteId.Size = new System.Drawing.Size(158, 20);
+            this.tbResidenteId.TabIndex = 22;
             // 
             // dtpFechaNacimiento
             // 
@@ -367,13 +374,6 @@
             this.btnGuardarCambios.TabIndex = 7;
             this.btnGuardarCambios.Text = "Guardar Cambios";
             this.btnGuardarCambios.Click += new System.EventHandler(this.btnGuardarCambios_Click);
-            // 
-            // tbResidenteId
-            // 
-            this.tbResidenteId.Location = new System.Drawing.Point(527, 154);
-            this.tbResidenteId.Name = "tbResidenteId";
-            this.tbResidenteId.Size = new System.Drawing.Size(158, 20);
-            this.tbResidenteId.TabIndex = 22;
             // 
             // frmGestionResidente
             // 
